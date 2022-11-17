@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/191fcab001.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>KSIĄŻKA TELEFONICZNA</h2>
+    <div id="contact-container">
+
+    </div>
+    <div id="input-container">
+        <form action="#">
+            <div id="name-container" class="inputs">
+                <p>IMIĘ I NAZWISKO</p>
+                <input type="text" id="name-input" name="name" required="true" required pattern="^\p{Lu}{1}\p{Ll}*\s\p{Lu}{1}\p{Ll}*(-\p{Lu})?\p{Ll}*$">
+            </div>
+            <div id="phone-container" class="inputs">
+                <p>TELEFON</p>
+                <input type="text" id="phone-input" name="phone" required="true" required pattern="([0-9]\s*){9}|(\+([0-9]\s*){12})">
+            </div>
+            <input type="submit" id="submit" value="Dodaj">
+        </form>
+    </div>
+    
+    
+</body>
+</html>
