@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                align-items: center;
+            }
+            button{
+                width: 20%;
+
+            }
+            img{
+                display: block;
+                border: 5px solid red;
+                height: 400px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <button>
+                Change
+            </button>
+            <img src="1.jpg">
+        </div>
+
+
+        
+
+        <script>
+            let flag = 1;
+
+            let button = document.querySelector('button')
+            let image = document.querySelector('img')
+            let colors = ["red","blue", "green"]
+
+            button.onclick = function(){
+                image.setAttribute("src", flag%3+1 + ".jpg");
+                image.style.borderColor = colors[flag%3];
+                flag++;
+            }
+            
+        </script>
+
+    </body>
+</html>

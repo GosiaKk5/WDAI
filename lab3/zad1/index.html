@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo"></p>
+
+        <script>
+            function myFunction(){
+                let name = prompt("Enter your name:");
+                if (name.slice(-1) == 'a'){
+                    document.getElementById("demo").innerHTML = "Witam panią, " + name;
+
+                }else{
+                    document.getElementById("demo").innerHTML = "Witam pana, " + name;
+                }
+            }
+        </script>
+    </body>
+</html>

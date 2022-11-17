@@ -1,0 +1,199 @@
+<! DOCTYPE html>  
+<html>  
+<head>  
+<meta charset = "UTF-8">  
+<title> How to change the color of PNG image using CSS </title>  
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">  
+  <meta http-equiv = "X-UA-Compatible" content = "ie=edge">  
+<style>  
+body {   
+  text-align: center;  
+  padding: 20px;  
+  position: absolute;  
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);  
+background-size: 1800% 1800%;  
+font-family: "Lucida Console", "Courier New", monospace;  
+-WebKit-animation: rainbow 18s ease infinite;  
+-z-animation: rainbow 18s ease infinite;  
+-o-animation: rainbow 18s ease infinite;  
+  animation: rainbow 18s ease infinite; }  
+@-webkit-keyframes rainbow {  
+    0% { background-position: 0% 82% }  
+    50% { background-position: 100% 19% }  
+    100% { background-position: 0% 82% }  
+}  
+@-moz-keyframes rainbow {  
+        0% { background-position: 0% 82% }  
+    50% { background-position: 100% 19% }  
+    100% { background-position: 0% 82% }  
+}  
+@-o-keyframes rainbow {  
+    0% { background-position: 0% 82% }  
+    50% { background-position: 100% 19% }  
+    100% { background-position: 0% 82% }  
+}  
+@keyframes rainbow {   
+        0% { background-position: 0% 82% }  
+    50% { background-position: 100% 19% }  
+    100% { background-position: 0% 82% }  
+}  
+h1 {    
+  position: relative;    
+  padding: 0;    
+  margin: 0;    
+  font-family: "Lucida Console", "Courier New", monospace;  
+  font-weight: 200;    
+  font-size: 40px;    
+  color: red;    
+  -webkit-transition: all 0.4s ease 0s;    
+  -o-transition: all 0.4s ease 0s;    
+  transition: all 0.4s ease 0s;    
+}    
+.preview {  
+  background: #ccc;  
+  width: 415px;  
+  height: 430px;  
+  border: solid 10px #fff;  
+}  
+input[type='radio'] {  
+  -webkit-appearance: none;  
+  -moz-appearance: none;  
+  width: 25px;  
+  height: 25px;  
+  margin: 5px 0 5px 5px;  
+  background-size: 225px 70px;  
+  position: relative;  
+  float: left;  
+  display: inline;  
+  top: 0;  
+  border-radius: 3px;  
+  z-index: 99999;  
+  cursor: pointer;  
+  box-shadow: 1px 1px 1px #000;  
+}  
+input[type='radio']:hover {  
+  -webkit-filter: opacity(.4);  
+  filter: opacity(.4);      
+}  
+.red {  
+  background: red;  
+}  
+.red:checked {  
+  background: linear-gradient(brown, red)  
+}  
+.black {  
+  background: red;  
+}  
+.black:checked {  
+  background: linear-gradient(red, black)  
+}  
+.green {  
+  background: green;  
+}  
+.green:checked {   
+  background: linear-gradient(green, lime);  
+}  
+.yellow {  
+  background: yellow;  
+}  
+.yellow:checked {  
+  background: linear-gradient(orange, yellow);  
+}  
+.purple {  
+  background: purple;  
+}  
+.pink {   
+  background: pink;  
+}  
+.purple:checked {  
+  background: linear-gradient(purple, violet);  
+}  
+.red:checked ~ img {  
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 red);  
+  filter: opacity(.5) drop-shadow(0 0 0 red);  
+}  
+.black:checked ~ img {  
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 black);  
+  filter: opacity(.5) drop-shadow(0 0 0 black);  
+}  
+.green:checked ~ img {  
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 green);  
+  filter: opacity(.5) drop-shadow(0 0 0 green);  
+}  
+.yellow:checked ~ img {  
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 yellow);  
+  filter: opacity(.5) drop-shadow(0 0 0 yellow);  
+}  
+.purple:checked ~ img {  
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 purple);  
+  filter: opacity(.5) drop-shadow(0 0 0 purple);  
+}  
+.pink:checked ~ img {  
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 pink);  
+  filter: opacity(.5) drop-shadow(0 0 0 pink);  
+}  
+img {  
+  width: 394px;  
+  height: 375px;  
+  position: relative;  
+}  
+.label {  
+  width: 150px;  
+  height: 75px;  
+  position: absolute;  
+  top: 170px;  
+  margin-left: 130px;  
+}  
+::selection {  
+  background: #000;  
+}  
+h2 {   
+text-align: center;   
+color: #46a294;   
+font-size: 22px;   
+width: 100%;  
+ margin: 10px 10;   
+position: relative;   
+line-height: 58px;   
+font-weight: 400;   
+font-family: "Lucida Console", "Courier New", monospace;  
+}  
+h2:before {   
+content: " ";   
+position: absolute;   
+left: 50%;   
+bottom: 0;   
+width: 100px;   
+height: 2px;  
+font-weight: bold;  
+ background-color: #2079df;   
+margin-left: -50px;  
+ }  
+h3 {    
+text-align: center;   
+  position: relative;    
+  padding: 0;    
+  margin: 0;    
+  font-family: "Lucida Console", "Courier New", monospace;  
+  font-weight: 400;    
+  font-size: 40px;    
+  color: red;    
+  -webkit-transition: all 0.4s ease 0s;    
+  -o-transition: all 0.4s ease 0s;    
+  transition: all 0.4s ease 0s;    
+}    
+</style>  
+<body>  
+<h1> Example </h1>  
+<h2> How to change color of PNG image using CSS </h2>  
+<div class = "preview">  
+  <input class = 'red' name = 'color' type = 'radio' />  
+   <input class = 'black' name = 'color' type = 'radio' />  
+  <input class = 'green' name = 'color' type = 'radio' />  
+    <input class = 'pink' name = 'color' type = 'radio' />  
+  <input checked class = 'yellow' name = 'color' type = 'radio' />  
+  <input class = 'purple' name = 'color' type = 'radio' />    
+  <img src = "2.png"/>  
+</div>  
+</body>  
+</html>  

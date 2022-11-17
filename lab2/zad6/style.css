@@ -1,0 +1,160 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    margin: 0;
+}
+
+
+.header{
+    display: flex;
+    background-color: rgb(30, 28, 28);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    margin: 0;
+    height: 50px;
+    width: 100%;
+    color: rgb(255, 225, 0);
+
+}
+
+.header .menu{
+    list-style-type: none;
+    display:flex;
+    margin:0;
+    padding:0;
+    padding-right: 20px;
+    
+}
+
+.header .logo{
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+
+.header .menu li{
+    align-self: stretch;
+    margin: 0px;
+    
+}
+
+.header .menu a{
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    margin: 0px;
+    color: white;
+    
+}
+
+.header .menu a:hover{
+    background-color:  rgba(105, 107, 117, 0.503); 
+    
+}
+
+/**/
+.mobile-navbar {
+    display: flex;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    flex-direction: column;
+    background-color: #000000cc;
+    z-index: -1;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    transform: translate(0, -150%);
+    transition: transform 0.5s cubic-bezier(0.6, 0.1, 0.1, 1.0);
+}
+.header .hamburger {
+    display: none;
+}
+
+.header .hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 3px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+    z-index: 4;
+}
+
+.header .hamburger #ham-toggle {
+    opacity: 0;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 5;
+    position: absolute;
+}
+
+.header .hamburger #ham-toggle:checked~span {
+    background-color: white;
+}
+
+.header .hamburger #ham-toggle:checked~span:nth-of-type(1) {
+    transform: translate(0, 9px) rotate(45deg);
+}
+
+.header .hamburger #ham-toggle:checked~span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.header .hamburger #ham-toggle:checked~span:nth-of-type(3) {
+    transform: translate(0, -9px) rotate(-45deg);
+}
+
+.header .hamburger #ham-toggle:checked~.header.logo {
+    display: none;
+}
+
+.header .hamburger #ham-toggle:checked~nav.mobile-navbar {
+    transform: translate(0, 0);
+    transition: transform 0.5s cubic-bezier(0.6, 0.1, 0.1, 1.0);
+}
+
+.header .hamburger .mobile-navbar .mobile-navbar-item {
+    display: flex;
+    color: white;
+    font-size: 15px;
+    width: fit-content;
+}
+
+.header .hamburger .mobile-navbar .mobile-navbar-item{
+    display: block;
+    width: 100%;
+    margin: 0px;
+}
+
+.header .hamburger .mobile-navbar .mobile-navbar-item a{
+    display: block;
+    align-self: stretch;
+    transition: 300ms ease all;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.header .hamburger .mobile-navbar .mobile-navbar-item a:hover{
+    background-color: rgba(128, 128, 128, 0.449);
+}
+
+@media screen and (max-width:800px) {
+    .header .menu {
+        display: none;
+    }
+
+    .header .hamburger{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        position: relative;
+    }
+
+}

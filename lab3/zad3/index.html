@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+
+        <h1>LIST</h1>
+        <ul id="list">
+
+
+        </ul>
+
+            <input id="list-elem" placeholder="New list element" type = "text">
+            <button id="add">ADD</button>
+            <button id="remove">REMOVE</button>
+
+        
+
+        <script>
+            let count;
+            
+            document.querySelector('#add').onclick = () =>{
+                const text = document.getElementById("list-elem").value;
+                const newElement = document.createElement('li');
+                newElement.innerHTML = text;
+                document.querySelector('#list').append(newElement);
+                document.querySelector('#list-elem').value = '';
+                count = list.querySelectorAll("li").length+1;
+                return false;
+            }
+
+            document.querySelector('#remove').onclick = () =>{
+                let element = document.querySelector('li')
+                document.querySelector('#list').removeChild(element);
+                
+            }
+
+
+        </script>
+
+    </body>
+</html>

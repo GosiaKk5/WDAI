@@ -1,0 +1,145 @@
+#par1 {
+    background-color: bisque;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: purple;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+#par2 {
+    background-color: rgb(127, 127, 172);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: yellow;
+    font-size: 20px;
+    height: 100px;
+    width: 400px;
+    overflow-y:scroll; 
+}
+
+#par3 {
+    background-color: rgb(214, 196, 204);
+    color: rgb(38, 77, 92);
+    border: 5px solid blue;
+    height: 50px;
+    width: 300px;
+    overflow-y: scroll;
+    margin-bottom: 0px;
+}
+
+#par4 {
+    background-color: rgb(84, 179, 142);
+    color: rgb(138, 46, 53);
+    margin-top: 0px;
+}
+
+/*tabela1*/
+
+.tab1{
+    width: 500px;
+    height: 250px;
+}
+
+.tab1 th {
+    border-bottom: 3px solid white;
+}
+
+.tab1_header{
+    background-color: rgb(75, 123, 211);
+   
+}
+
+.tab1_row1{
+    background-color: rgb(190, 190, 214);
+}
+
+.tab1_row2{
+    background-color: rgb(218, 218, 230);
+
+}
+
+/*tabela2*/
+
+.tab2 {
+    height: 120px;
+    width: 500px; 
+}
+
+.tab2, .tab2 th, .tab2 td {
+    border: 1px solid black;
+    border-collapse: collapse ;
+}
+
+.tab2 th{
+    background-color: gray; 
+} 
+
+.tab2 tr{
+    background-color: rgb(213, 206, 206);
+}
+
+/*article*/
+
+#article1 {
+    width: 500px;
+}
+
+#article1 img {
+    height: 200px;
+    margin: 10px;
+}
+
+.article1 p{
+    text-align: justify;
+}
+
+#whale1{
+    float: left;
+}
+
+#whale2{
+    float:right;
+}
+
+/*images*/
+
+#img_whale {
+
+    height: 100px;
+    position: static;
+}
+
+#img_cat {
+    height: 100px;
+    position: relative;
+    left: 200px;
+}
+
+#img_flamingos {
+    height: 100px;
+    position: relative;
+    right: 130px;
+}
+
+#list_eu {
+    background-image: url("union.webp");
+    width: fit-content;
+    background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(169, 164, 164);
+    position:relative;
+    top:10px;
+}
+
+#list_asia {
+    background-image: url("china.webp");
+    width: fit-content;
+    background-size: cover;
+    color: rgb(21, 91, 172);
+    position: relative;
+}
+
+
+
+
+

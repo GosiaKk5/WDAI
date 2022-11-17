@@ -1,0 +1,134 @@
+
+.main-container {
+    width: 100%;
+    height: 800px;
+    background: url("bg.jpg") rgb(64, 174, 238);
+    opacity: 0.65;
+    background-size: cover;
+    background-blend-mode: multiply;
+    font-family:Arial, Helvetica, sans-serif;
+    
+  }
+
+  .main-container .page-head{
+    width: 100%;
+    height: fit-content;
+    display:flex;
+    justify-content: space-between;
+    background-color:  rgb(7, 134, 207);
+    align-items: center;
+}
+
+.main-container .page-head a{
+    text-decoration: none;
+
+}
+
+.main-container .page-head .logo{
+    flex-basis: 30%;
+    color: rgba(255, 255, 255, 0.804);  
+    padding: 10px;
+    font-size: 2vw;
+    width: fit-content;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.main-container .page-head .logo .logo-bold{
+    font-weight: bold;
+}
+
+.main-container .page-head .nav{
+    flex-basis: 40%;
+    display: flex;  
+    gap:1%;
+    
+    justify-content: center;
+    font-size: 1.3vw;
+    letter-spacing: 1px;
+
+}
+
+
+.main-container .page-head .nav div a{
+    color: rgba(255, 255, 255, 0.778);
+    display: block;
+    padding: 10px;
+  }
+
+
+
+
+.main-container .page-head .log-sign{
+    flex-basis: 30%;
+    display: flex;
+    color: rgba(255, 255, 255, 0.778);
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+
+}
+
+.main-container .page-head .log-sign div{
+    border-radius: 15px;
+    padding: 7px 13px;
+}
+
+.main-container .page-head .log{
+    border: 2px solid rgba(255, 255, 255, 0.797);
+    color: rgba(255, 255, 255, 0.836); 
+}
+
+.main-container .page-head .sign-up{
+    background-color:white;
+    border: 2px solid rgba(255, 255, 255, 0.797);
+    color:rgb(7, 134, 207);
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9cf;
+    min-width: 130px;
+    z-index: 1;
+  }
+  
+  .main-container .page-head .nav .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .menu:hover .dropdown-content {
+    display: block;
+  }
+
+  @media only screen and (max-width: 750px) {
+    .main-container .page-head{
+        flex-wrap: wrap;
+    }
+
+    .main-container .page-head .logo{
+        order: 1;
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+
+
+    .main-container .page-head .nav{
+        order: 3;
+        flex-basis: 100%;
+        font-size: 12px;
+    }
+    .main-container .page-head .log-sign {
+        order: 2;
+        flex-basis: 100%;
+        font-size: 10px;
+    }
+  }

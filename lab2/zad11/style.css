@@ -1,0 +1,88 @@
+body{
+    background-color: rgb(226, 250, 7);
+}
+
+a{
+    text-decoration: none;
+}
+
+.menu{
+    width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    list-style: none;
+    margin: auto;
+}
+.menu-item{
+    overflow: hidden;
+}
+
+.menu-item:target .sub-menu{
+    max-height: 1000px;
+}
+
+.menu-button-main{
+    display: block;
+    padding: 20px 15px;
+    background-color: #f95dc0;
+    color: white;
+    position: relative;
+}
+
+.menu-item:target .menu-button-main{
+    background-color: rgb(208, 68, 68);
+}
+
+.sub-menu{
+    position: relative;
+    background: #0a608f;
+    max-height:0em;
+    transition: .6s ease all;
+}
+
+.sub-menu:after{
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    border-left: 15px solid transparent;
+    border-right:15px solid transparent;
+    border-top:12px solid  rgb(208, 68, 68); 
+}
+
+.sub-menu a{
+    display: block;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 15px;
+    position: relative;
+    
+}
+
+.sub-menu a:hover{
+    background: #6e92bc;
+    background: linear-gradient(to top, #74b2d4 0%,  #74b2d4 50%,  #0a608f 50%,  #0a608f 100%);
+    transition: .6s ease all;
+}
+
+.sub-menu a:hover:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    opacity: 1;
+    border-top: 24px solid transparent;
+    border-left: 15px solid  rgb(226, 250, 7);
+    border-bottom: 24px solid transparent;
+}
+
+.sub-menu a:hover:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top:0;
+    opacity: 1;
+    border-top: 24px solid transparent;
+    border-right: 15px solid  rgb(226, 250, 7);
+    border-bottom: 24px solid transparent;
+}

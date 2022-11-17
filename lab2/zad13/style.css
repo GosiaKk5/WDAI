@@ -1,0 +1,254 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 10vh 10vh 70vh auto 15vh;
+    grid-template-columns: 1.5fr 7fr 1.5fr;
+    gap: 10px 10px;
+    grid-template-areas: 
+    "head head head"
+    "sidebar nav ads"
+    "sidebar main ads"
+    ". main ."
+    "foot foot foot";
+  
+}
+
+header{
+    grid-area: head;
+    border: 2px solid red;
+}
+.sidebar{
+    grid-area: sidebar;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index:3;
+    background-color: white;
+}
+
+.sidebar img{
+    width:70px;
+    height: 70px;
+    object-fit: cover;
+    object-position: 50% 0%;
+    border-radius: 50px;
+    display:block;
+    margin: 10px
+
+}
+
+.sidebar p{
+    display: block;
+    width: fit-content;
+    text-align: center;
+    padding: 5px;
+}
+
+.sidebar .icons{
+    display:flex;
+    flex-direction: row;
+    gap:5px 5px;
+    margin: 10px;
+}
+
+.sidebar i{
+    display: block;
+    width: fit-content;
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+nav{
+    grid-area: nav;
+    border: 2px solid red;
+}
+
+main{
+    grid-area: main;
+    border: 2px solid red;
+    position: relative;
+}
+
+main:before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background-image: url('images/water.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+}
+
+main article{
+    z-index: 0;
+    background-color: rgba(255, 255, 255, 0.773);
+    transform: skew(-15deg) translate(6%,0);
+    width:85%;
+    margin: 50px 10px;
+    padding:10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.article-inner p{
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 13px;
+}
+
+.article-inner h4{
+    padding-bottom: 0;
+    margin-bottom: 5px;
+}
+
+.article-inner{
+    transform: skew(15deg);
+    width:85%;
+    margin: auto;
+    height: fit-content;
+    padding: 10px;
+    color: grey; 
+}
+.article-inner img{
+    display: block;
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+    object-position: 70% 0%;
+    border-radius: 50px;
+    float: left; 
+    margin:15px;
+    border-radius: 50%;
+    -webkit-shape-outside:circle();
+    shape-outside:circle();
+      
+}
+
+.form-container{
+    background-image: url(images/bg-form.jpg);
+    z-index: 1;
+    margin:20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.form-blurry-part{
+    background-color: rgba(255, 255, 255, 0.919);
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 60% 0%);
+    z-index: 2;
+    position: relative;
+}
+
+
+
+.form-inside{
+    width:47%;
+    border: 1px solid rgba(246, 246, 248, 0);
+    z-index:3;
+    margin-left: 3%;
+}
+
+.form-inside p{
+    color: rgb(16, 164, 16);
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.form-inside input[type=text], .form-inside input[type=email]{
+    margin-bottom: 0px;
+    width:60%;
+    display:block;
+    border: 0;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.form-inside label{
+    font-size: 13px;
+    color:grey;
+    display: inline-block;
+}
+
+.form-button{
+    background-color: rgba(16, 164, 16, 0.644);
+    width:fit-content;
+    color: white;
+    padding: 10px 25px;
+    font-size: 13px;
+    border-radius: 25px;
+    margin: 20px 0;
+}
+
+.ads{
+    grid-area: ads;
+    border: 2px solid red;
+}
+footer{
+    grid-area: foot;
+    border: 2px solid red;
+}
+
+
+
+
+@media screen and (max-width:940px){
+    .container{
+        display: grid;
+        grid-template-rows: 10vh 10vh 70vh auto 15vh;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+        "head head"
+        "nav nav"
+        "sidebar main "
+        ". main "
+        "ads foot";
+    }
+    main article{
+        width: 80%;
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        display: grid;
+        grid-template-rows: 10vh 10vh auto 15vh 10vh 10vh;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "head"
+        "nav"
+        "main"
+        "sidebar"
+        "ads"
+        "foot";
+    }
+
+    .sidebar{
+        flex-direction: row;
+        position:sticky;
+        bottom:0;
+
+    }
+
+    .sidebar p{
+        border-right: 1px solid rgb(215, 209, 209);
+    }
+
+    
+}

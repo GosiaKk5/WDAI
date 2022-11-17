@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+ .text div{
+    animation: leftInAnimation ease 3s;
+    
+}
+.inside-form{
+    animation: rightInAnimation ease 3s;
+}
+
+@keyframes leftInAnimation {
+    0%{
+        transform: translateX(-100%);
+      }
+    100% {
+        transform: translateX(0);
+      }
+}
+
+@keyframes rightInAnimation {
+    0%{
+        transform: translateX(100%);
+      }
+    100% {
+        transform: translateX(0);
+      }
+}
+
+@keyframes topInAnimation {
+    0%{
+        transform: translateY(-100%);
+      }
+    100% {
+        transform: translateY(0);
+      }
+}
+
+@keyframes bottomInAnimation {
+    0%{
+        transform: translateY(100%);
+      }
+    100% {
+        transform: translateY(0);
+      }
+}
+
+
+.main-container{
+    background-image: linear-gradient(176deg, #0078e8 70%, white calc(70% + 2px));
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap:100px;
+}
+  
+.text-container {  
+    flex-basis: 60%;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    gap:20px 20px;
+    margin-left: 20px;
+    
+  }
+
+.text p{
+    font-size: 13px;
+}
+
+.form-header{
+    margin-bottom: 20px;
+}
+
+.inside-form{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+
+}
+
+input[type="text"], input[type="email"]{
+    border: none;
+	border-bottom: 1px solid #ddd;
+}
+
+.inside-form input[type=submit]{
+    background-color: #0078e8;
+    color: white;
+    border: none;
+    width: fit-content;
+    padding: 5px 20px;
+    border-radius: 5px;
+
+    
+}
+
+.text input[type=submit]{
+    background-color: #0078e8;
+    color: white;
+    border: none;
+    width: fit-content;
+    padding: 5px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .text-container{
+        width:50%;
+    }
+
+    .text div{
+        animation: topInAnimation ease 3s;
+        
+    }
+
+    .text{
+        animation: topInAnimation ease 3s;
+        
+    }
+    .inside-form{
+        animation: bottomInAnimation ease 3s;
+    }
+  }
+
+
+

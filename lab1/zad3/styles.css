@@ -1,0 +1,45 @@
+body {
+	font-family:'Times New Roman', Times, 'Times New Roman', Times, serif;
+	font-size: 62.5%;
+	width: 700px;
+	background-color: rgb(233, 243, 239);
+}
+h1 {
+	font-size: 2.4em;
+	background-color: rgba(30, 75, 79, 0.829);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	border-top: 4px solid yellow;
+	border-bottom: 4px solid yellow;
+	color: white;
+}
+h2 {
+	font-size: 1.8em;
+	color: #666666;
+	text-decoration: underline solid blue 1px;
+}
+h3 {
+	font-size: 1.4em;
+	color: black;
+}
+p, ul, ol {
+	font-size: 1.2em;
+	line-height: 130%;
+}
+
+ul {
+	color: black;
+	list-style: square;
+}
+
+.list{
+	padding: 10px;
+	width: 25%;
+	background-color: rgba(249, 204, 5, 0.533);
+	border: 1px solid rgba(244, 201, 12, 0.895);
+	border-top: 5px solid rgba(244, 201, 12, 0.895);
+	text-align: left;
+	float: right;
+	margin: 15px
+}

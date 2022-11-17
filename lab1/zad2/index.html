@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root{
+            --hfcolor: rgb(127, 122, 122);
+        }
+        .grid_container{
+            font-family: Arial, Helvetica, sans-serif;
+            display: grid;
+            height: 400px;
+            max-width: 700px;
+            border: 15px solid rgb(213, 206, 206);
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 2fr 1fr 4fr 1fr;
+            grid-template-areas:
+            "head head head head"
+            "nav nav nav nav"
+            "aside main main main"
+            "foot foot foot foot";
+        }
+
+        .site_header{
+            grid-area: head;
+            border: 2px solid black;
+            background-color: var(--hfcolor);
+
+        }
+
+        .header_title{
+            width: fit-content;
+            position: relative;
+            left: 50%;
+            
+        }
+
+        .logo{
+
+            margin-left: 2%;
+            width: 23%;
+            height: 50%;
+            position: relative;
+            border: 2px solid black;
+            top: 20px;
+            background-color: white;
+            
+            
+        }
+
+        .site_navbar{
+            grid-area: nav;
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            
+            
+        }
+        .nav_item{
+            height: 100%;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 3;
+            
+        }
+
+        .site_aside{
+            grid-area: aside;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .site_main{
+            grid-area: main;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .site_foot{
+            grid-area: foot;
+            border: 2px solid black;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--hfcolor);
+
+        }
+        .foot_text{
+            position: relative;
+            top: 30%;
+
+        }
+
+        .header_title{
+            justify-self: center; 
+        }
+        
+
+
+
+
+    </style>
+
+</head>
+<body>
+        <div class = "grid_container">
+            
+            <header class = "site_header">
+                <div class="logo">LOGO</div>
+                <div class="header_title">TOP STRONY</div>
+            </header>
+            <nav class="site_navbar">
+                <div class = "nav_item">strona główna</div>
+                <div class = "nav_item">galeria</div>
+                <div class = "nav_item">lokalizacja</div>
+                <div class = "nav_item">kontakt</div>
+            </nav>
+            <asite class="site_aside">LEWA KOLUMNA</asite>
+            <main class="site_main">ZAWARTOŚĆ STRONY</main>
+            <foot class = "site_foot">
+                <div class="foot_text">STOPKA</div>
+            </foot>
+        </div>
+    
+</body>
+</html>

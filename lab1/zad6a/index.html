@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main_container{
+            display: flex;
+            border: 2px solid red;
+            flex-wrap: wrap;
+        }
+        
+        .container1{
+            flex-basis: 50%;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+
+        }
+
+        .container2{
+            flex-basis: 50%;
+            display:flex;
+            flex-flow: row;
+            justify-content: right;
+
+        }
+
+        .item1{
+            flex-basis: content;
+            padding: 10px;
+            border: 2px solid blue;
+            color: white;
+            background-color: red;
+            text-align: center;
+        }
+
+        .item2{
+            flex-basis: content;
+            padding: 10px;
+            border: 2px solid blue;
+            color: white;
+            background-color: red;
+            text-align: center;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="main_container">
+        <div class="container1">
+            <div class="item1">Home</div>
+            <div class="item1">About us</div>
+            <div class="item1">Services</div>
+    
+        </div>
+        <div class="container2">
+            <div class="item2">Sign up</div>
+            <div class="item2">Login</div>
+        </div>
+    </div>
+
+</body>
+</html>
