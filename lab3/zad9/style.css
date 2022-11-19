@@ -1,0 +1,30 @@
+#container{
+    background-color: rgb(223, 223, 231);
+    width:500px;
+    height: 400px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p{
+    margin: auto;
+    position:relative;
+    top: 25%;
+
+}
+
+#circle{
+    width:80px;
+    height:80px;
+    background-color: red;
+    border-radius: 50px;
+    position: relative;
+    left: 50px;
+    top: 50px;
+    transition: left .5s, top .5s ;
+    z-index:1;
+}
+
