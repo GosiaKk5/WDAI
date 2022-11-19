@@ -1,0 +1,69 @@
+/* Add a green text color and a checkmark when the requirements are right */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(75, 75, 75);
+}
+
+h4{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-weight: 600;
+}
+
+#input-container{
+    margin: 10px;
+}
+  
+.valid:before {
+    position: relative;
+    left: -5px;
+    font-family: "Font Awesome 5 Free";
+    content: "\f058";
+    color: green;
+  }
+  
+  
+.invalid:before {
+    position: relative;
+    left: -5px;
+    font-family: "Font Awesome 5 Free";
+    content: "\f057";
+    color:rgb(177, 173, 173);
+  }
+
+
+#submit{
+
+      display:none;
+  }
+
+form i {
+    margin-left: -27px;
+    cursor: pointer;
+}
+
+#match{
+    color: red;
+}
+
+form label{
+    font-size: 12px;
+}
+
+form input{
+    margin-bottom: 10px;
+    height: 30px;
+    width: 250px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    
+}
+
+form input:focus{
+    border: 2px solid green;
+}
+
+  

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/191fcab001.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="input-container">
+        <form action="#">
+            <label for="password-input">New password</label><br>
+            <input type="text" id="password-input" name="name" required="true" pattern="(?=.*\d)(?=.*[^a-zA-Z0-9])(?=.*[A-Z]).{8,}">
+            <i class="fa-solid fa-eye" id="togglePassword"></i><br>
+            
+            <label for="repeat-input">Repeat new password</label><br>
+            <input type="text" id="repeat-input" name="phone">
+            <i class="fa-solid fa-eye" id="togglePassword2"></i><br>
+
+            <input type="submit" id="submit" value="Dodaj">
+        </form>
+
+        <p id="match"></p>
+
+        <div id="message">
+            <h4>Password requirements</h4>
+            <p id="length" class="invalid">at least 8 characters</p>
+            <p id="special" class="invalid">at least one special character</p>
+            <p id="capital" class="invalid">at least one capital letter</p>
+            <p id="number" class="invalid">at least one digit</b></p>
+            
+          </div>
+    </div>
+</body>
+</html>
