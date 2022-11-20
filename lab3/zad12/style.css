@@ -2,6 +2,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url(images/board-bg.jpg);
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 #board{
@@ -11,6 +12,7 @@ body{
     top: 0;
     left: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 #score{
