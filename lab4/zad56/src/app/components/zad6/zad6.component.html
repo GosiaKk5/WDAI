@@ -1,0 +1,38 @@
+<div class="main-container">
+    <div class = "description-container">
+        <div *ngIf = "selectedFirst">
+            <h2>The Basics</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus numquam impedit ad, perspiciatis architecto quidem officia. Rem aliquid minima, repellat sapiente cumque error cupiditate ad cum obcaecati molestias, eius, animi quae quas voluptas suscipit earum! Laborum error ea blanditiis autem corrupti vel ad, cumque rerum, numquam nisi harum. Reprehenderit, odit!</p>
+        </div>
+
+        <div *ngIf = "selectedSecond">
+            <h2>Components</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis velit perferendis soluta quisquam. Vero dicta quod a asperiores animi porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti saepe dolorum eligendi nesciunt et quaerat esse velit architecto ea qui iure quidem sed quia aliquam quo, corporis ut eum placeat?</p>
+        </div>
+
+        <div *ngIf = "selectedThird">
+            <h2>Events</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea libero quis temporibus enim rem minus assumenda quam laboriosam, consectetur labore dolores quos ad fugit, vel optio nobis odit consequatur earum! Recusandae, aliquid eum. Nesciunt incidunt vitae enim, cum, dolor officia odio quos debitis voluptatum iusto nostrum! Omnis ipsa pariatur tenetur?</p>
+        </div>
+
+    </div>
+
+    <div class="cards-container">
+        <h1>Wybierz temat</h1>
+        <div>
+            <h2>The Basics</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis similique officiis eos optio. Sunt natus beatae eaque. Magnam, nisi fugit.</p>
+            <button (click)="firstIsSelected()">LEARN MORE</button>
+        </div>
+        <div>
+            <h2>Componenets</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum atque ea enim aliquid adipisci porro? Eaque accusamus fuga nihil esse!</p>
+            <button (click)="secondIsSelected()">LEARN MORE</button>
+        </div>
+        <div>
+            <h2>Events</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reprehenderit eveniet eos odit, non eaque quod expedita similique sequi temporibus?</p>
+            <button (click)="thirdIsSelected()">LEARN MORE</button>
+        </div>
+    </div>
+</div>

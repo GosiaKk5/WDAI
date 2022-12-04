@@ -1,0 +1,19 @@
+{
+    "Fiat":{
+        "Panda": {"Czarny" : "gps, czujniki parkowania", "Czerwony": "gps, czujniki parkowania, klimatyzacja", "Niebieski" : "gps klimatyzacja"},
+        "Siena": {"Złoty" : "klimatyzacja", "Srebny" : "klimatyzacja"},
+        "Bravo": {"Bordowy": "gps, czujniki parkowania, klimatyzacja", "Szampański": "gps, czujniki parkowania, klimatyzacja"}
+    },
+
+    "BMW":{
+        "E21": {"Czarny" : "gps, klimatyzacja", "Biały": "gps"},
+        "M1": {"Czarny": "gps, czujniki parkowania, klimatyzacja", "Czerwony": "klimatyzacja"},
+        "M3": {"Pomarańczowy": "gps, klimatyzacja"}
+    },
+
+    "Hiundai":{
+        "i20": {"Biały" : "gps, czujniki parkowania" , "Szary": "czujniki parkowania"},
+        "Kona": {"Niebieski": "czujniki parkowania", "Zielony": "gps, czujniki parkowania"},
+        "Tucson": {"Czerwony" : "gps, czujniki parkowania, klimatyzacja", "Czarny" : "czujniki parkowania, klimatyzacja"}
+    }
+}

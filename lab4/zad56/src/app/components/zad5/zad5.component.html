@@ -1,0 +1,28 @@
+<div class ="container">
+    <select [(ngModel)] = "selectedCompany" (ngModelChange) = "companyIsChosen()">
+        <option disabled selected></option>
+        <option *ngFor="let company of data | keyvalue">{{company.key}}</option>
+    </select>
+    
+    <select [(ngModel)] = "selectedModel" (ngModelChange) = "modelIsChosen()">
+        <ng-container *ngIf="showModels">
+            <option disabled selected></option>
+            <option *ngFor="let model of data[selectedCompany] | keyvalue">{{model.key}}</option>
+        </ng-container>
+    </select>
+    
+    <select [(ngModel)] = "selectedColor" (ngModelChange) = "colorIsChosen()">
+        <ng-container *ngIf="showColors">
+            <option disabled selected></option>
+            <option *ngFor="let color of data[selectedCompany][selectedModel] | keyvalue">{{color.key}}</option>
+        </ng-container>
+    </select>
+    
+    <div class ="result" *ngIf="showInformation">
+        <h3>{{selectedCompany}} {{selectedModel}} {{selectedColor}} </h3>
+         <p>{{data[selectedCompany][selectedModel][selectedColor]}} </p>
+    </div>
+</div>
+
+
+

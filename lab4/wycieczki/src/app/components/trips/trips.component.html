@@ -1,0 +1,44 @@
+<div class="main-container">
+    <button class="show-add-trip-button" (click) ="showAddTripClick()">Dodaj wycieczkę</button>
+    <app-addtrip (onAddTrip)="addNewTrip($event) " ></app-addtrip> <!--*ngIf="showAddTrip"-->
+    <div class="trips-container">
+        
+        <div class = "counter" [ngStyle] = "{'background-color': getTakenCounter() < 10 ? 'rgba(255, 0, 0, 0.332)' : 'rgba(0, 255, 0, 0.332)'}">Ilość zarezerwowanych wycieczek: {{getTakenCounter()}}</div>
+
+        <div class="trip" *ngFor="let trip of trips" 
+        [ngStyle]="{'background-color': trip.peopleLimit - trip.takenSpots <=3 ? (trip.peopleLimit == trip.takenSpots ? 'rgba(183, 27, 27, 0.271)' : 'rgba(255, 166, 0, 0.229)')  : 'white'}" 
+        [ngClass]="{'cheapest': trip == findTheCheapest(), 'mostExpensive': trip == findTheMostExpensive(), 'cheapestAndExpensive': findTheMostExpensive()==findTheCheapest()}">
+            
+            <div class="remove-trip" (click)="removeTrip(trip)"><i class="fa-solid fa-trash-can" ></i></div>
+
+            <img src="{{trip.image}}">
+            <h2>{{trip.title | uppercase}}</h2>
+            <h4>{{trip.country | uppercase}} </h4>
+            <p>{{trip.startDate}} - {{trip.endDate}}</p>
+
+            <rating [(ngModel)]="trip.rate" [max]="max" [readonly]="isReadonly">
+            </rating>
+            
+            <p>{{trip.description}}</p>
+
+            
+            <div class="nav-container">
+                <div class="count-buttons">
+                    <i class="fa-solid fa-circle-minus" (click)="remove(trip)"></i>
+                    <div class="trip-counter">{{trip.takenSpots}}</div>
+                    <i class="fa-solid fa-circle-plus" [ngStyle]="{'visibility': trip.peopleLimit == trip.takenSpots ? 'hidden' : 'visible'}" (click)="add(trip)"></i>
+                </div>
+                <div class="price">{{trip.price | currency:'USD':'symbol':'3.0-2'}}</div>
+            </div>
+            <div class="spots-left">
+                <p *ngIf="trip.takenSpots < trip.peopleLimit">Pozostało {{trip.peopleLimit - trip.takenSpots}} miejsc</p>
+                <p *ngIf="trip.takenSpots == trip.peopleLimit">Brak wolnych miejsc</p>
+            </div>
+            
+        </div>
+
+    </div>
+
+</div>
+
+
