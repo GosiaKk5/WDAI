@@ -15,6 +15,7 @@ import { RatingModule } from 'ngx-bootstrap/rating';
 import { FiltrtripsComponent } from './components/filtrtrips/filtrtrips.component';
 import {MatSelectModule} from '@angular/material/select';
 import { MatSliderModule} from '@angular/material/slider';
+import { TripfilterPipe } from './pipes/tripfilter.pipe';
 
 
 
@@ -23,7 +24,8 @@ import { MatSliderModule} from '@angular/material/slider';
     AppComponent,
     TripsComponent,
     AddtripComponent,
-    FiltrtripsComponent
+    FiltrtripsComponent,
+    TripfilterPipe
     
   ],
   imports: [

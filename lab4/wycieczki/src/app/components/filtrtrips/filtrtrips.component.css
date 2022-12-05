@@ -40,8 +40,8 @@ rating{
     text-align: center;
 }
 
-.stars-input label{
-    
+.stars-input i{
+    margin-left: 5px;
 }
 
 

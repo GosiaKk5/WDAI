@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import {FilteredValues} from 'src/assets/filteredValues'
 import {Trip} from 'src/assets/trip'
@@ -8,6 +9,8 @@ import {Trip} from 'src/assets/trip'
   styleUrls: ['./filtrtrips.component.css']
 })
 export class FiltrtripsComponent implements OnInit{
+
+  pipe = new DatePipe('en-US');
 
   @Input('trips') trips: Trip[] = [];
   @Output() emitFilter = new EventEmitter();
@@ -66,11 +69,16 @@ export class FiltrtripsComponent implements OnInit{
     return maxTrip.price;
   }
 
+  restartStars(){
+    this.chosenRate = 0;
+    this.filtrNow();
+  }
+
   filtrNow(){
     let filter = {
       countries: this.chosenCountries,
-      startDate: this.chosenStartDate,
-      endDate: this.chosenEndDate,
+      startDate: this.pipe.transform(this.chosenStartDate, 'dd.MM.yyyy')!,
+      endDate: this.pipe.transform(this.chosenEndDate, 'dd.MM.yyyy')!,
       rate: this.chosenRate,
       minPrice: this.chosenMinPrice,
       maxPrice: this.chosenMaxPrice

@@ -42,10 +42,10 @@ export class TripsComponent implements OnInit{
     return this.takenCounter
   }
 
-  findTheCheapest() : Trip{
-    let minTrip = this.trips[0];
+  findTheCheapest(trips : Trip[]) : Trip{
+    let minTrip = trips[0];
 
-    for(let trip of this.trips){
+    for(let trip of trips){
       if(minTrip.price > trip.price){
         minTrip = trip;
       }
@@ -54,10 +54,10 @@ export class TripsComponent implements OnInit{
     return minTrip;
   }
 
-  findTheMostExpensive() : Trip{
-    let maxTrip = this.trips[0];
+  findTheMostExpensive(trips : Trip[]): Trip{
+    let maxTrip = trips[0];
 
-    for(let trip of this.trips){
+    for(let trip of trips){
       if(maxTrip.price < trip.price){
         maxTrip = trip;
       }
@@ -67,11 +67,11 @@ export class TripsComponent implements OnInit{
   }
 
   removeTrip(trip : Trip){
-    for (let i = 0; i < this.trips.length; ++i) {
-      if (this.trips[i] == trip) {
-        this.trips.splice(i, 1)
-      }
-    } 
+
+    this.trips = this.trips.filter(function(value, index, arr){ 
+      return value != trip;});
+
+    console.log("buuuuu")
   }
 
   addNewTrip(trip:Trip){
@@ -86,6 +86,10 @@ export class TripsComponent implements OnInit{
   getFilter(filter : FilteredValues){
     this.filter = filter;
     console.log(this.filter)
+  }
+
+  useFilter(){
+    return this.filter;
   }
 
 

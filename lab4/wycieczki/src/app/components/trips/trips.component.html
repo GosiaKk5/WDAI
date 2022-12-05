@@ -1,14 +1,15 @@
 <div class="main-container">
     <button class="show-add-trip-button" (click) ="showAddTripClick()">Dodaj wycieczkę</button>
+    <app-addtrip (onAddTrip)="addNewTrip($event) " *ngIf="showAddTrip" ></app-addtrip>
     <app-filtrtrips [trips]="trips" (emitFilter)="getFilter($event)"></app-filtrtrips>
-    <app-addtrip (onAddTrip)="addNewTrip($event) " *ngIf="showAddTrip" ></app-addtrip> <!---->
+     <!---->
     <div class="trips-container">
         
         <div class = "counter" [ngStyle] = "{'background-color': getTakenCounter() < 10 ? 'rgba(255, 0, 0, 0.332)' : 'rgba(0, 255, 0, 0.332)'}">Ilość zarezerwowanych wycieczek: {{getTakenCounter()}}</div>
 
-        <div class="trip" *ngFor="let trip of trips" 
+        <div class="trip" *ngFor="let trip of trips | tripfilter: useFilter()" 
         [ngStyle]="{'background-color': trip.peopleLimit - trip.takenSpots <=3 ? (trip.peopleLimit == trip.takenSpots ? 'rgba(183, 27, 27, 0.271)' : 'rgba(255, 166, 0, 0.229)')  : 'white'}" 
-        [ngClass]="{'cheapest': trip == findTheCheapest(), 'mostExpensive': trip == findTheMostExpensive(), 'cheapestAndExpensive': findTheMostExpensive()==findTheCheapest()}">
+        [ngClass]="{'cheapest': trip == findTheCheapest(trips | tripfilter: useFilter()), 'mostExpensive': trip == findTheMostExpensive(trips | tripfilter: useFilter()), 'cheapestAndExpensive': findTheMostExpensive(trips | tripfilter: useFilter())==findTheCheapest(trips | tripfilter: useFilter())}">
             
             <div class="remove-trip" (click)="removeTrip(trip)"><i class="fa-solid fa-trash-can" ></i></div>
 
