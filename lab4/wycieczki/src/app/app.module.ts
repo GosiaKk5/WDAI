@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RatingModule } from 'ngx-bootstrap/rating';
+import { FiltrtripsComponent } from './components/filtrtrips/filtrtrips.component';
+import {MatSelectModule} from '@angular/material/select';
+import { MatSliderModule} from '@angular/material/slider';
 
 
 
@@ -19,7 +22,9 @@ import { RatingModule } from 'ngx-bootstrap/rating';
   declarations: [
     AppComponent,
     TripsComponent,
-    AddtripComponent
+    AddtripComponent,
+    FiltrtripsComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -34,6 +39,9 @@ import { RatingModule } from 'ngx-bootstrap/rating';
     MatInputModule,
     MatButtonModule,
     RatingModule.forRoot(),
+    MatSelectModule,
+    MatSliderModule
+
 
   ],
   providers: [  

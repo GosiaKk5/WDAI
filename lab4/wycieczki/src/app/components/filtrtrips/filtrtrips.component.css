@@ -1,0 +1,45 @@
+.main-container{
+    width:95%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+rating{
+    align-self: center;
+    padding: 15px 0px;
+    color: #d8ca02;
+    font-size: 40px;
+    flex-basis: 100%;
+}
+
+.price-input{
+    display: inline;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px
+}
+
+.stars-input{
+    display: inline;
+    min-width:200px;
+    text-align: center;
+}
+
+.stars-input label{
+    position: relative;
+    top: -7px;
+    margin-right: 5px;
+}
+
+

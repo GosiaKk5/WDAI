@@ -1,0 +1,48 @@
+<div class = "main-container">
+    <h1>Filtruj:</h1>
+    <form >
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Wybierz państwa</mat-label>
+            <mat-select>
+                <mat-option >
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+            <input   matStartDate placeholder="Start date">
+            <input   matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+
+        <span class="price-input">
+            <mat-form-field >
+            <mat-label >Cena min</mat-label>
+            <input matInput >
+        </mat-form-field>
+        <mat-form-field >
+            <mat-label >Cena max</mat-label>
+            <input matInput>
+        </mat-form-field>
+        </span>
+        
+        
+        
+        <div class="stars-input">
+            <label >Minimalna ocena:</label>
+            <rating [(ngModel)]="rate" [max]="5" [readonly]="isReadonly">
+            </rating>
+        </div>
+        
+
+    </form>
+</div>
+
+
+
