@@ -4,8 +4,9 @@
         
         <mat-form-field appearance="fill">
             <mat-label>Wybierz państwa</mat-label>
-            <mat-select>
-                <mat-option >
+            <mat-select [(ngModel)] = "chosenCountries" (ngModelChange)="filtrNow()" name = "chosenCountries" multiple>
+                <mat-option  *ngFor="let country of getCountries()" [value]="country">
+                    {{country}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
@@ -14,14 +15,14 @@
         <mat-form-field appearance="fill">
             <mat-label>Enter a date range</mat-label>
             <mat-date-range-input [rangePicker]="picker">
-            <input   matStartDate placeholder="Start date">
-            <input   matEndDate placeholder="End date">
+            <input   matStartDate [(ngModel)] = "chosenStartDate" (ngModelChange)="filtrNow()" name="chosenStartDate" placeholder="Start date">
+            <input   matEndDate [(ngModel)] = "chosenEndDate" (ngModelChange)="filtrNow()" name="chosenEndDate" placeholder="End date">
             </mat-date-range-input>
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-date-range-picker #picker></mat-date-range-picker>
         </mat-form-field>
 
-        <span class="price-input">
+        <!--<span class="price-input">
             <mat-form-field >
             <mat-label >Cena min</mat-label>
             <input matInput >
@@ -30,13 +31,23 @@
             <mat-label >Cena max</mat-label>
             <input matInput>
         </mat-form-field>
-        </span>
+        </span>-->
+
+        <div class="price-input">
+            <mat-label>Cena:</mat-label>
+            <mat-slider min="{{getMinPrice()}}" max="{{getMaxPrice()}}" step="1" showTickMarks [discrete]="true" >
+                <input matSliderStartThumb [(ngModel)] = "chosenMinPrice" name="chosenMinDate" (ngModelChange)="filtrNow()">
+                <input matSliderEndThumb [(ngModel)] = "chosenMaxPrice" name="chosenMaxPrice" (ngModelChange)="filtrNow()">
+            </mat-slider>
+        </div>
+
+        
         
         
         
         <div class="stars-input">
             <label >Minimalna ocena:</label>
-            <rating [(ngModel)]="rate" [max]="5" [readonly]="isReadonly">
+            <rating [max]="5" [readonly]="isReadonly" [(ngModel)] = "chosenRate" name="chosenRate" (ngModelChange)="filtrNow()">
             </rating>
         </div>
         

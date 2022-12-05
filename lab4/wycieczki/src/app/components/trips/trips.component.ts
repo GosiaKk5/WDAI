@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import tripsData from '../../../assets/trips.json';
+import {FilteredValues} from 'src/assets/filteredValues';
 import {Trip} from 'src/assets/trip'
 
 @Component({
@@ -16,6 +17,8 @@ export class TripsComponent implements OnInit{
   rate=0;
   max=5;
   isReadonly = false;
+
+  filter: FilteredValues;
 
   ngOnInit(): void {
   }
@@ -78,6 +81,11 @@ export class TripsComponent implements OnInit{
 
   showAddTripClick(){
     this.showAddTrip = !this.showAddTrip;
+  }
+
+  getFilter(filter : FilteredValues){
+    this.filter = filter;
+    console.log(this.filter)
   }
 
 

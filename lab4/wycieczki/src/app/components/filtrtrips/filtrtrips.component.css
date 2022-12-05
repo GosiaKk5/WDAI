@@ -10,8 +10,8 @@
 form{
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
+    align-items: baseline;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -21,13 +21,17 @@ rating{
     color: #d8ca02;
     font-size: 40px;
     flex-basis: 100%;
+    position: relative;
+    top: 10px;
+    padding-left: 5px
 }
 
 .price-input{
     display: inline;
     display: flex;
     flex-wrap: nowrap;
-    gap: 5px
+    gap: 10px;
+    align-items: center;
 }
 
 .stars-input{
@@ -37,9 +41,7 @@ rating{
 }
 
 .stars-input label{
-    position: relative;
-    top: -7px;
-    margin-right: 5px;
+    
 }
 
 

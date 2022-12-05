@@ -1,7 +1,7 @@
 <div class="main-container">
     <button class="show-add-trip-button" (click) ="showAddTripClick()">Dodaj wycieczkę</button>
-    <app-filtrtrips></app-filtrtrips>
-    <app-addtrip (onAddTrip)="addNewTrip($event) " ></app-addtrip> <!--*ngIf="showAddTrip"-->
+    <app-filtrtrips [trips]="trips" (emitFilter)="getFilter($event)"></app-filtrtrips>
+    <app-addtrip (onAddTrip)="addNewTrip($event) " *ngIf="showAddTrip" ></app-addtrip> <!---->
     <div class="trips-container">
         
         <div class = "counter" [ngStyle] = "{'background-color': getTakenCounter() < 10 ? 'rgba(255, 0, 0, 0.332)' : 'rgba(0, 255, 0, 0.332)'}">Ilość zarezerwowanych wycieczek: {{getTakenCounter()}}</div>
