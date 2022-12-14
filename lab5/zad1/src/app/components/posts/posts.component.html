@@ -1,0 +1,28 @@
+
+
+<div class="main-container">
+
+    <div class="form-container">    
+        <h4>Add post</h4>
+        <form [formGroup]="myGroup" (ngSubmit)="onSubmit()">
+            <mat-form-field >
+                <mat-label>Tytuł</mat-label>
+                <input matInput  formControlName="title">
+            </mat-form-field>
+
+            <mat-form-field >
+                <mat-label  >Opis</mat-label>
+                <textarea matInput formControlName="text"></textarea>
+            </mat-form-field>
+
+            <button  type="submit" >Send</button>
+        </form>
+    </div>
+
+
+    <div *ngFor="let d of data" class = "post-container">
+        <h3>{{d.id}}</h3>
+        <h4>{{d.title}}</h4>
+        <p>{{d.body}}</p>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.main-container{
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.photo-container{
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+    padding: 10px;
+}
+
+.photo-container p{
+    padding: 0px 10px;
+}

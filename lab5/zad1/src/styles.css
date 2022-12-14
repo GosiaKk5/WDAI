@@ -1,0 +1,6 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.771);
+}

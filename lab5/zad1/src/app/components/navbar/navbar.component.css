@@ -1,0 +1,17 @@
+nav a.active {
+    background-color: rgb(46, 73, 137);;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(44, 91, 202, 0.823);
+    gap:2px;
+}
+nav a{
+    text-decoration: none;
+    color:  rgba(255, 255, 255, 0.878);
+    padding: 15px 25px;
+    display: inline-block;
+}

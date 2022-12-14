@@ -1,0 +1,40 @@
+.main-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.post-container{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.form-container {
+    text-align: center;
+    width: fit-content;
+    box-shadow: rgba(31, 70, 200, 0.508) 0px 1px 4px;
+    align-self: center;
+    padding: 15px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+h4{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+button{
+    background-color: rgb(46, 73, 137);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 100px;
+    align-self: center;
+}

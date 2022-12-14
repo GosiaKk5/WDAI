@@ -1,0 +1,11 @@
+<div class="main-container">
+   
+
+    <div *ngFor="let d of data" class = "photo-container">
+        <a routerLink="/photos/{{d.id}}"><img src={{d.thumbnailUrl}} alt=""></a>
+        <p>Album:  {{d.albumId}}</p>
+        <p>ID: {{d.id}}</p>
+        <p>Titles{{d.title}}</p>
+    </div>
+</div>
+
