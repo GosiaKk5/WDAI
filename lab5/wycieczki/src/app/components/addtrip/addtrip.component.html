@@ -1,0 +1,50 @@
+<div>
+    <h1>Dodaj wycieczkę:</h1>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    
+    <mat-form-field >
+        <mat-label>Tytuł</mat-label>
+        <input matInput  formControlName="newTitle">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label  >Kraj</mat-label>
+        <input matInput formControlName="newCountry">
+    </mat-form-field>
+
+    <mat-form-field >
+        <mat-label  >Cena</mat-label>
+        <input formControlName="newPrice" matInput>
+    </mat-form-field>
+    
+    <mat-form-field >
+        <mat-label >Limit osób</mat-label>
+        <input matInput  formControlName="newLimit">
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input  formControlName="newStart" matStartDate placeholder="Start date">
+          <input  formControlName="newEnd" matEndDate placeholder="End date">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+
+    
+
+    <mat-form-field >
+        <mat-label  >Opis</mat-label>
+        <textarea matInput formControlName="newDescription"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label  >Link do zdjęcia</mat-label>
+        <input matInput formControlName="newImage">
+    </mat-form-field>
+
+    <button type="submit">Dodaj wycieczkę</button>
+
+</form>
+</div>

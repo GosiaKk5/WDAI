@@ -1,0 +1,32 @@
+<div class ="main-container">
+    <a class="back" routerLink="/trips" routerLinkActive="active">WRÓĆ</a>
+    <div class = "trip">
+    
+    <h1>{{trip.title}} ({{trip.country}})</h1>
+    
+    <img src="{{trip.image}}">
+
+    <rating [(ngModel)]="trip.rate" [max]=5 [readonly]= false>
+    </rating>
+    
+    <p class="description">{{trip.description}}</p>
+    
+
+    <div class="nav-container">
+        <div class="count-buttons">
+            <i class="fa-solid fa-circle-minus" (click)="remove()"></i>
+            <div class="trip-counter">{{trip.takenSpots}}</div>
+            <i class="fa-solid fa-circle-plus" [ngStyle]="{'visibility': trip.peopleLimit == trip.takenSpots ? 'hidden' : 'visible'}" (click)="add()"></i>
+        </div>
+        <div class="price">{{trip.price | currency:'USD':'symbol':'3.0-2'}}</div>
+    </div>
+    <div class="spots-left">
+        <p *ngIf="trip.takenSpots < trip.peopleLimit">Pozostało {{trip.peopleLimit - trip.takenSpots}} miejsc</p>
+        <p *ngIf="trip.takenSpots == trip.peopleLimit">Brak wolnych miejsc</p>
+    </div>
+    
+    
+</div>
+<app-opinionform></app-opinionform>
+</div>
+

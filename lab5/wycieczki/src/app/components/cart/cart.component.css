@@ -1,0 +1,38 @@
+.main-container{
+    width:70%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.trip{
+    display: flex;
+    font-size : 20px;
+}
+
+.title{
+    flex-basis: 45%;
+}
+
+.taken-spots{
+    flex-basis: 35%
+}
+
+.price{
+    flex-basis: 20%;
+    text-align: right;
+}
+
+.remove-trip{
+    flex-basis: 10%;
+    text-align: right;
+}
+
+hr{
+    color: black;
+    font-weight: 100;
+}
+

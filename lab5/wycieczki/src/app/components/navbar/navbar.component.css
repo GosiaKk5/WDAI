@@ -1,0 +1,30 @@
+nav a.active {
+    background-color: rgb(31, 71, 163);;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(12, 73, 215, 0.823);
+    gap:2px;
+}
+nav a{
+    text-decoration: none;
+    color:  rgba(255, 255, 255, 0.878);
+    padding: 15px 25px;
+    display: inline-block;
+}
+
+.head{
+    text-align: center;
+    background-color:rgba(203, 57, 27, 0.823);
+    color: white;
+    padding: 5px
+}
+
+@media only screen and (max-width: 700px) {
+   nav{
+    flex-wrap: wrap;
+   }
+  }

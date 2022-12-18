@@ -1,0 +1,25 @@
+
+div{
+    width:60%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0px 10px;
+}
+
+button{
+    background-color: rgba(0, 0, 0, 0.656);
+    color:white;
+    border: 0px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+

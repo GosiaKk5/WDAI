@@ -1,0 +1,123 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.show-add-trip-button{
+    width: fit-content;
+    align-self: flex-end;
+    background-color: rgba(0, 0, 0, 0.656);
+    color:white;
+    border: 0px;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+.trips-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.656);
+    
+
+}
+
+.counter{
+    flex-basis: 100%;
+    align-self: center;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.trip{
+    width:300px;
+    display:flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.remove-trip{
+    font-size: 35px;
+    align-self: flex-end;
+    position: absolute;
+    cursor: pointer;
+}
+
+.trip img{
+    width:200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 200px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-self: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    cursor: pointer;
+    
+
+}
+
+.trip h2,h3,h4,p{
+    margin:5px;
+    padding: 0px;
+    text-align: center;
+}
+
+rating{
+    align-self: center;
+    padding: 15px 0px;
+    color: #d8ca02;font-size: 40px;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.nav-container i{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.count-buttons{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.price{
+    font-size: 40px
+}
+
+.spots-left{
+    font-size: 13px;
+    align-self: flex-start;
+    
+}
+
+.cheapest{
+    box-shadow: rgba(255, 0, 0, 0.45) 0px 0px 15px;
+}
+
+.mostExpensive{
+    box-shadow: rgba(1, 203, 1, 0.45) 0px 0px 15px;
+}
+
+.cheapestAndExpensive{
+    box-shadow: rgba(255, 203, 1, 0.45) 0px 0px 15px;
+}
+
