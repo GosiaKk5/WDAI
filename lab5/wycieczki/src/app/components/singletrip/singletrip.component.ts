@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { TripsService } from 'src/app/services/trips.service';
+import { review } from 'src/assets/review';
 import { Trip } from 'src/assets/trip';
 
 @Component({
@@ -15,12 +16,16 @@ export class SingletripComponent {
   private routeSub: Subscription;
   photoUrl : string;
   trips: Trip[] = [];
+  reviews: review[];
+  avgRate: number;
+  reviewCouner: number;
 
   trip: Trip;
 
 
 
   constructor(private route: ActivatedRoute, private tripsService : TripsService) { 
+    this.reviews = [];
   }
 
   ngOnInit() {
@@ -59,6 +64,22 @@ export class SingletripComponent {
     }   
     this.tripsService.updateTrip(this.trip);
 
+  }
+
+  addReview(newReview: review){
+    this.reviews.push(newReview);
+    this.getAvgRate();
+  }
+
+  getAvgRate(){
+    let avg = 0;
+    
+    for(let review of this.reviews){
+      avg +=  review.rate;
+    }
+    this.reviewCouner = this.reviews.length
+    this.avgRate = avg/this.reviewCouner
+    console.log('avg' + this.avgRate)
   }
 
 }

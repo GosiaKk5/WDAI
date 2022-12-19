@@ -6,10 +6,11 @@
     
     <img src="{{trip.image}}">
 
-    <rating [(ngModel)]="trip.rate" [max]=5 [readonly]= false>
-    </rating>
     
     <p class="description">{{trip.description}}</p>
+
+    <rating  class="avg-stars" [ngModel]="avgRate" [max]=5 [readonly]= true class="stars">
+    </rating>
     
 
     <div class="nav-container">
@@ -28,6 +29,23 @@
     
     
 </div>
-<app-opinionform></app-opinionform>
+<div class="reviews-container">
+    <h1>Opinie</h1>
+    <div class="review" *ngFor="let review of reviews">
+        <span class="nick"><b>{{review.nick}}</b></span>
+        <mat-divider></mat-divider>
+        <span ><b>Tytuł wycieczki: </b>{{review.tripTitle}}</span>
+        <span><b>Ocena: </b><rating [ngModel]="review.rate" (ngModelChange) = "getAvgRate" [max]=5 [readonly]= false class="stars">
+        </rating></span>
+        
+        <span ><b>Data: </b>{{review.date}}</span>
+        <span ><b>Recenzja: </b></span><span>{{review.text}}</span>
+        <br>
+        
+    </div>
+    
+</div>
+
+<app-opinionform (newReviewEvent)="addReview($event)"></app-opinionform>
 </div>
 

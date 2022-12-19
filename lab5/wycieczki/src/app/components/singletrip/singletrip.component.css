@@ -46,9 +46,9 @@
 }
 
 rating{
-    align-self: center;
-    color: #d8ca02;font-size: 40px;
-    margin-bottom: 30px;
+    color: #d8ca02;
+    font-size: 35px;
+    margin: 5px;
 }
 
 
@@ -73,6 +73,10 @@ rating{
     padding-left: 15px;
 }
 
+.avg-stars{
+    
+}
+
 .price{
     font-size: 40px
 }
@@ -83,3 +87,30 @@ rating{
     align-self: center;
     
 }
+
+.review{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px 20px;
+    gap: 5px;
+}
+
+.reviews-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+
+}
+
+.reviews-container h1{
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.nick{
+    font-size: 20px;
+}
+

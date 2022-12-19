@@ -1,1 +1,45 @@
-<p>opinionform works!</p>
+<div class="main-container">
+    <h1>Dodaj opinię:</h1>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    
+    <div class="date-nick">
+        <rating formControlName="rate" [max]=5 [readonly]= false class="stars">
+        </rating>
+
+        <mat-form-field >
+            <mat-label>Tytuł wycieczki</mat-label>
+            <input matInput  formControlName="title">
+        </mat-form-field>
+
+        <mat-form-field >
+            <mat-label>Nick</mat-label>
+            <input matInput  formControlName="nick">
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+            <mat-label>Choose a date</mat-label>
+            <input matInput formControlName="date" [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>      
+    </div>
+    
+
+        <mat-form-field class="text" >
+            <mat-label  >Opis</mat-label>
+            <textarea matInput formControlName="text" ></textarea>
+        </mat-form-field>
+
+        <div class="errors" *ngIf="submited">
+            <div *ngIf="!myForm.get('title')!.valid">Brakuje nazwy wycieczki</div>
+            <div *ngIf="!myForm.get('nick')!.valid">Wprowadź nick</div>
+            <div *ngIf="!myForm.get('text')!.valid">Recenzja powinna zawierać od 50 do 500 znaków</div>
+        </div>
+    
+    <div class="button">
+        <button type="submit" >Dodaj opinię</button>
+    </div>
+    
+
+</form>
+</div>

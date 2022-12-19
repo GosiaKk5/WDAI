@@ -1,0 +1,65 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 20px
+}
+
+form{
+    display: flex;
+    gap: 0px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.date-nick{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    flex-basis: 40%;   
+}
+
+rating{
+    align-self: center;
+    color: #d8ca02;font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.text{
+    flex-basis: 55%;
+}
+
+.button{
+    flex-basis: 100%;
+    text-align: center;
+}
+
+button{
+    width: fit-content;
+    border: 0px;
+    padding: 10px 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.656);
+    border-radius: 10px; 
+}
+
+.errors{
+    color:red;
+    margin: 10px;
+    text-align: center;
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    .text{
+        flex-basis: 90%;
+    }
+
+    .date-nick{
+        flex-basis: 90%;   
+    }
+  }
