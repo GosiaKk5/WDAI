@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "students-9a6e0": {
+      "hosting": {
+        "Students": [
+          "students-9a6e0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "students-9a6e0"
+  }
+}

@@ -20,6 +20,7 @@
         </div>
         <div class="price">{{trip.price | currency:'USD':'symbol':'3.0-2'}}</div>
     </div>
+    
     <div class="spots-left">
         <p *ngIf="trip.takenSpots < trip.peopleLimit">Pozostało {{trip.peopleLimit - trip.takenSpots}} miejsc</p>
         <p *ngIf="trip.takenSpots == trip.peopleLimit">Brak wolnych miejsc</p>
