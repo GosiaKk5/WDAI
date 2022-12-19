@@ -15,7 +15,8 @@ export class CartComponent {
   }
 
   ngOnInit(): void{
-    this.trips = this.tripsService.getTrips();
+    //this.trips = this.tripsService.getTrips();
+    this.tripsService.getTrips().subscribe((trips) => (this.trips = trips));
   }
 
   getSum() : number{
@@ -28,6 +29,7 @@ export class CartComponent {
 
   removeSpots(trip : Trip){
     trip.takenSpots = 0;
+    this.tripsService.updateTrip(trip);
   }
 
 }

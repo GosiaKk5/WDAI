@@ -1,5 +1,4 @@
 export interface Trip {
-
     id: number;
     title: string;
     country: string;

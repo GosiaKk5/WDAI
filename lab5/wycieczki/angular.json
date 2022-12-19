@@ -93,6 +93,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "wycieczki:build:production",
+            "firebaseProject": "wycieczki-4b18e",
+            "firebaseHostingSite": "wycieczki-4b18e"
+          }
         }
       }
     }

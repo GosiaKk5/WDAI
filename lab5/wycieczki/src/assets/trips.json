@@ -1,4 +1,4 @@
-[
+{"trips":[
     {
         "id": 0,
         "title": "Majorka",
@@ -138,4 +138,4 @@
         "description": "Kemer to nieduży przyjazny kurort Riwiery Tureckiej. Cudowne krajobrazy plaż u podnóża wysokich gór zachwycają podróżnych do wybierania tego miejsca na wypoczynek. Jednym z największych zalet Kemer są właśnie cudowne plaże, pozwalające zrelaksować się i zapomnieć o wszystkim innym.",
         "image": "assets/images/kemer.jpg"
     }
-]
+]}

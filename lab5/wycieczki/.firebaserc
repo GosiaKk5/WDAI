@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "wycieczki-4b18e": {
+      "hosting": {
+        "wycieczki": [
+          "wycieczki-4b18e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "wycieczki-4b18e"
+  }
+}

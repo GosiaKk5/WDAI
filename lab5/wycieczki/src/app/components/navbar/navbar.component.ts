@@ -15,7 +15,8 @@ export class NavbarComponent {
   }
 
   ngOnInit(): void{
-    this.trips = this.tripsService.getTrips();
+    //this.trips = this.tripsService.getTrips();
+    this.tripsService.getTrips().subscribe((trips) => (this.trips = trips));
   }
 
   getSum() : number{

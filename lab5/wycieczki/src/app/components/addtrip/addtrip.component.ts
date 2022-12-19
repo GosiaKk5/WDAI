@@ -19,7 +19,8 @@ export class AddtripComponent {
   trips: Trip[] = [];
 
   ngOnInit(): void{
-    this.trips = this.tripsService.getTrips();
+    this.tripsService.getTrips().subscribe((trips) => (this.trips = trips));
+    //this.trips = this.tripsService.getTrips();
     this.createFormControls();
   }
 
@@ -60,11 +61,21 @@ export class AddtripComponent {
     
   }
 
+  getNewID(): number{
+    let newID = 0;
+    for(let trip of this.trips){
+      if(newID <= trip.id){
+        newID = trip.id+1;
+      }
+    }
+    return newID
+  }
+
   onSubmit() {
 
    if(this.myForm.valid){
     const newTrip: Trip = {
-      id: this.trips.length,
+      id: this.getNewID(),
       title: this.myForm.value.newTitle,
       country: this.myForm.value.newCountry,
       startDate:  this.pipe.transform(this.myForm.value.newStart, 'dd.MM.yyyy')!,

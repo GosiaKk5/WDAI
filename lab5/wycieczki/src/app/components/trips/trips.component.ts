@@ -17,11 +17,10 @@ export class TripsComponent implements OnInit{
   }
 
   ngOnInit(): void{
-    //this.tripsService.getTrips().subscribe((trips) => (this.trips = trips));
-    this.trips = this.tripsService.getTrips();
+    this.tripsService.getTrips().subscribe((trips) => (this.trips = trips));
+    //this.trips = this.tripsService.getTrips();
   }
 
-  takenCounter: number = 0;
   showAddTrip = false;
 
   rate=0;
@@ -34,15 +33,15 @@ export class TripsComponent implements OnInit{
   add(trip: Trip){
     if (trip.takenSpots < trip.peopleLimit){
       trip.takenSpots += 1;
-      this.takenCounter ++;
     } 
+    this.tripsService.updateTrip(trip);
   }
 
   remove(trip: Trip){
     if(trip.takenSpots > 0){
       trip.takenSpots -= 1;
-      this.takenCounter--;
     }   
+    this.tripsService.updateTrip(trip);
 
   }
 
@@ -52,10 +51,6 @@ export class TripsComponent implements OnInit{
       sum += trip.takenSpots
     }
     return sum;
-  }
-
-  getTakenCounter(): number{
-    return this.takenCounter
   }
 
   findTheCheapest(trips : Trip[]) : Trip{
@@ -84,10 +79,10 @@ export class TripsComponent implements OnInit{
 
   removeTrip(trip : Trip){
 
-    this.trips = this.trips.filter(function(value, index, arr){ 
-      return value != trip;});
+    /*this.trips = this.trips.filter(function(value, index, arr){ 
+      return value != trip;});*/
 
-    console.log("buuuuu")
+      this.tripsService.deleteTrip(trip);
   }
 
   addNewTrip(trip:Trip){
