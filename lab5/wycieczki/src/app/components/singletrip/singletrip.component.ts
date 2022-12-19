@@ -68,7 +68,7 @@ export class SingletripComponent {
 
   addReview(newReview: review){
     this.reviews.push(newReview);
-    this.getAvgRate();
+    this.getAvgRate()
   }
 
   getAvgRate(){

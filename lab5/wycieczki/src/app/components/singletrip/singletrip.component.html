@@ -10,7 +10,7 @@
     <p class="description">{{trip.description}}</p>
 
     <rating  class="avg-stars" [ngModel]="avgRate" [max]=5 [readonly]= true class="stars">
-    </rating>
+    </rating> <span>({{reviews.length}})</span>
     
 
     <div class="nav-container">
@@ -35,7 +35,7 @@
         <span class="nick"><b>{{review.nick}}</b></span>
         <mat-divider></mat-divider>
         <span ><b>Tytuł wycieczki: </b>{{review.tripTitle}}</span>
-        <span><b>Ocena: </b><rating [ngModel]="review.rate" (ngModelChange) = "getAvgRate" [max]=5 [readonly]= false class="stars">
+        <span><b>Ocena: </b><rating [ngModel]="review.rate" [max]=5 [readonly]= false class="stars">
         </rating></span>
         
         <span ><b>Data: </b>{{review.date}}</span>
