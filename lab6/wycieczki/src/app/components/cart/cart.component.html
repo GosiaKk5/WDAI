@@ -1,0 +1,54 @@
+
+<div class = "main-container">
+
+    <div class = "trip">
+        <div class ="title">
+            <p>NAZWA</p>
+        </div>
+        <div class = "taken-spots">
+            <p>ILOŚĆ</p>
+        </div>
+        <div class = "price">
+            <p>SUMA</p>
+        </div>
+        <div class="remove-trip">
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <br>
+    <div class="trip" *ngFor="let trip of trips">
+        <ng-container *ngIf="trip.takenSpots > 0">
+            <div class ="title">
+                <p>{{trip.title}}</p>
+            </div>
+            <div class = "taken-spots">
+                {{trip.takenSpots}}
+            </div>
+            <div class = "price">
+                {{(trip.takenSpots * trip.price) | currency:'USD':'symbol':'3.0-2'}}
+            </div>
+            <div class="remove-trip" (click) = "removeSpots(trip)">
+                <i class="fa-solid fa-trash-can" ></i>
+            </div>
+        </ng-container>
+    </div>
+    <br>
+    <mat-divider></mat-divider>
+    <br>
+
+    <div class = "trip">
+        <div class ="title">
+            <p>RAZEM</p>
+        </div>
+        <div class = "taken-spots">
+            <p></p>
+        </div>
+        <div class = "price">
+            <p>{{getSum() | currency:'USD':'symbol':'3.0-2'}}</p>
+        </div>
+        <div class="remove-trip">
+        
+        </div>
+    </div>
+
+</div>

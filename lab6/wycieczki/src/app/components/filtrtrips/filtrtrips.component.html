@@ -1,0 +1,49 @@
+<div class = "main-container">
+    <h1>Filtruj:</h1>
+    <form >
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Wybierz państwa</mat-label>
+            <mat-select [(ngModel)] = "chosenCountries" (ngModelChange)="filtrNow()" name = "chosenCountries" multiple>
+                <mat-option  *ngFor="let country of getCountries()" [value]="country">
+                    {{country}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+            <input   matStartDate [(ngModel)] = "chosenStartDate" (ngModelChange)="filtrNow()" name="chosenStartDate" placeholder="Start date">
+            <input   matEndDate [(ngModel)] = "chosenEndDate" (ngModelChange)="filtrNow()" name="chosenEndDate" placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+
+        <div class="price-input">
+            <mat-label>Cena:</mat-label>
+            <mat-slider min="{{getMinPrice()}}" max="{{getMaxPrice()}}" step="1" showTickMarks [discrete]="true" >
+                <input matSliderStartThumb [(ngModel)] = "chosenMinPrice" name="chosenMinDate" (ngModelChange)="filtrNow()">
+                <input matSliderEndThumb [(ngModel)] = "chosenMaxPrice" name="chosenMaxPrice" (ngModelChange)="filtrNow()">
+            </mat-slider>
+        </div>
+
+        
+        <div class="stars-input">
+            <label >Minimalna ocena:</label>
+            <span (click) = "restartStars()" ><i  class="fa-solid fa-rotate-right"></i></span>
+            
+            <rating [max]="5" [readonly]="isReadonly" [(ngModel)] = "chosenRate" name="chosenRate" (ngModelChange)="filtrNow()">
+            </rating>
+            
+
+        </div>
+        
+
+    </form>
+</div>
+
+
+

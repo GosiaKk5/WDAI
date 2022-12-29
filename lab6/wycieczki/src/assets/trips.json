@@ -1,0 +1,141 @@
+{"trips":[
+    {
+        "id": 0,
+        "title": "Majorka",
+        "country": "Hiszpania",
+        "startDate": "05.05.2023",
+        "endDate": "08.05.2023",
+        "rate": 0,
+        "price": 800,
+        "peopleLimit": 10,
+        "takenSpots": 0,
+        "description": "„Niebo jak turkus, morze jak lazur, góry jak szmaragd, powietrze jak w niebie” - tak Chopin opisał Majorkę. Wyspa uznawana za najpiękniejszą w basenie Morza Śródziemnego to miejsce barwne i pełne kontrastów, a nade wszystko dostarczające mocy wrażeń.",
+        "image": "assets/images/majorka.jpg"
+    },
+
+    {
+        "id": 1,
+        "title": "Costa Brava",
+        "country": "Hiszpania",
+        "startDate": "20.06.2023",
+        "endDate": "27.06.2023",
+        "rate": 0,
+        "price": 2500,
+        "peopleLimit": 15,
+        "takenSpots": 0,
+        "description": "Wymarzone wakacje na „dzikim wybrzeżu”, gdzie piaszczyste plaże mienią się złotem, a turkusowe morze zachęca do kąpieli. Gorący klimat, atmosfera wiecznej fiesty i bajeczne widoki to tylko niektóre z atrakcji, które ma do zaoferowania Costa Brava.",
+        "image": "assets/images/costa-brava.jpg"
+    },
+
+    {
+        "id": 2,
+        "title": "Costa Del Maresme",
+        "country": "Hiszpania",
+        "startDate": "01.07.2023",
+        "endDate": "14.07.2023",
+        "rate": 0,
+        "price": 3500,
+        "peopleLimit": 20,
+        "takenSpots": 0,
+        "description": "Costa Del Maresme to południowe, przepiękne wybrzeże Katalonii, które rozciąga się od Blanes aż po artystyczną i pełną słońca Barcelonę. To zakątek, który obejmuje prawie pięćdziesiąt kilometrów rajskich plaż, klifów oraz pachnących dębowych i piniowych lasów. ",
+        "image": "assets/images/costa-del-maresme.jpg"
+    },
+
+    {
+        "id": 3,
+        "title": "Kreta",
+        "country": "Grecja",
+        "startDate": "05.04.2023",
+        "endDate": "12.04.2023",
+        "rate": 0,
+        "price": 2500,
+        "peopleLimit": 12,
+        "takenSpots": 0,
+        "description": "Kreta to królowa wysp greckich, na której międzynarodowe i ekskluzywne kurorty turystyczne przeplatają się z dzikimi, malowniczymi zatokami. Zróżnicowanie krajobrazu, śródziemnomorska aura i grecka kuchnia sprzyjają wakacyjnemu wypoczynkowi.",
+        "image": "assets/images/kreta.jpg"
+    },
+
+    {
+        "id": 4,
+        "title": "Rodos",
+        "country": "Grecja",
+        "startDate": "03.03.2023",
+        "endDate": "10.03.2023",
+        "rate": 0,
+        "price": 2000,
+        "peopleLimit": 20,
+        "takenSpots": 0,
+        "description": "Rodos to malownicza wyspa grecka, na której niemal zawsze świeci słońce. Ciepła woda idealna do kąpieli i kwitnące róże to wizytówka tego kurortu. To bardzo chętnie wybierane na wakacje miejsce na Morzu Egejskim z nowoczesnym centrum turystycznym.",
+        "image": "assets/images/rodos.jpg"
+    },
+
+    {
+        "id": 5,
+        "title": "Złote Piaski",
+        "country": "Bułgaria",
+        "startDate": "25.08.2023",
+        "endDate": "10.09.2023",
+        "rate": 0,
+        "price": 5000,
+        "peopleLimit": 25,
+        "takenSpots": 0,
+        "description": "Złociste plaże, turkusowe zatoki i klimatyczne knajpki - Złote Piaski mają wiele do zaoferowania turystom, którzy chcą odpocząć i jednocześnie nie wydać fortuny. To jeden z kierunków, w którym oferty na wakacje last minute pojawiają się najczęściej.",
+        "image": "assets/images/zlote-piaski.jpg"
+    },
+
+    {
+        "id": 6,
+        "title": "Słoneczny Brzeg",
+        "country": "Bułgaria",
+        "startDate": "12.05.2023",
+        "endDate": "18.05.2023",
+        "rate": 0,
+        "price": 2000,
+        "peopleLimit": 23,
+        "takenSpots": 0,
+        "description": "Słoneczny Brzeg to wspaniałe miejsce na wakacje dla całej rodziny – piękna pogoda, ciepłe morze, szerokie piaszczyste plaże i niskie ceny sprawiają, że jest to nadal jeden z najczęściej wybieranych kierunków wakacyjnych. Zobacz i przekonaj się sam.",
+        "image": "assets/images/zloty-brzeg.jpg"
+    },
+
+    {
+        "id": 7,
+        "title": "Alanya",
+        "country": "Turcja",
+        "startDate": "05.06.2023",
+        "endDate": "12.06.2023",
+        "rate": 0,
+        "price": 2500,
+        "peopleLimit": 10,
+        "takenSpots": 0,
+        "description": "Położona nad Morzem Śródziemnym Alanya zachwyca swoimi pięknymi plażami i cudowną krystalicznie czystą wodą. Kurort od północy otoczony jest malowniczymi górami Taurus, a samo centrum miasta rozdziela skalisty cypel osiągający wysokość do 250 metrów. ",
+        "image": "assets/images/alanya.JPG"
+    },
+
+    {
+        "id": 8,
+        "title": "Bodrum",
+        "country": "Turcja",
+        "startDate": "04.10.2023",
+        "endDate": "14.10.2023",
+        "rate": 0,
+        "price": 3199,
+        "peopleLimit": 8,
+        "takenSpots": 0,
+        "description": "Typowym krajobrazem dla Bodrum są małe białe domki rozciągające się na wzgórzach. Znajduję się tu również jedna z największych przystani jachtowych nad Morzem Egejskim, co dodaje uroku atmosferze miasteczka. Z portu możesz udać się w rejs na wyspę Kos lub Rodos.",
+        "image": "assets/images/bodrum.jpg"
+    },
+
+    {
+        "id": 9,
+        "title": "Kemer",
+        "country": "Turcja",
+        "startDate": "24.06.2023",
+        "endDate": "30.06.2023",
+        "rate": 0,
+        "price": 4500,
+        "peopleLimit": 20,
+        "takenSpots": 0,
+        "description": "Kemer to nieduży przyjazny kurort Riwiery Tureckiej. Cudowne krajobrazy plaż u podnóża wysokich gór zachwycają podróżnych do wybierania tego miejsca na wypoczynek. Jednym z największych zalet Kemer są właśnie cudowne plaże, pozwalające zrelaksować się i zapomnieć o wszystkim innym.",
+        "image": "assets/images/kemer.jpg"
+    }
+]}

@@ -1,0 +1,33 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 50px auto;
+    width: 450px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0px 10px;
+    justify-content: center;
+}
+
+
+.button{
+    flex-basis: 100%;
+    text-align: center;
+}
+
+button{
+    width: fit-content;
+    border: 0px;
+    padding: 10px 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.656);
+    border-radius: 10px; 
+}
+
+
+

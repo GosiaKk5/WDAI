@@ -1,0 +1,31 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px
+}
+
+.main-container h1{
+    font-family:cursive;
+    font-size: 60px;
+    color: rgb(205, 83, 12);
+    font-weight: 700;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.main-container p{}
+
+.main-container .sun{
+    width: 200px;
+}
+
+.main-container .map{
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.main-container div{
+    text-align: center;
+}

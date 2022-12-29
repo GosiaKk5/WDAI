@@ -1,0 +1,17 @@
+<nav>
+    <a routerLink="/home" routerLinkActive="active">GŁÓWNA</a>
+    <a routerLink="/trips" routerLinkActive="active">WYCIECZKI</a>
+    <a routerLink="/cart" routerLinkActive="active">KOSZYK</a>
+    <a routerLink="/triphist" routerLinkActive="active">HISTORIA</a>
+    <a routerLink="/addtrip" routerLinkActive="active">DODAJ WYCIECZKĘ</a>
+    <div>
+        <a routerLink="/login" routerLinkActive="active" *ngIf="auth.userData == null">LOGOWANIE</a>
+        <a routerLink="/register" routerLinkActive="active" *ngIf="auth.userData == null">REJESTRACJA</a>
+
+        <div (click)="auth.logOut()" *ngIf="auth.userData != null">
+            Log out
+        </div>
+    </div>
+    
+</nav>
+<div class="head">Wybrana ilość: {{count()}} | Wartość: {{getSum()}} $ | Najbliższy wyjazd: {{first()}} </div>
