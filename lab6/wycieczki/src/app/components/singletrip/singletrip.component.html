@@ -46,6 +46,6 @@
     
 </div>
 
-<app-opinionform (newReviewEvent)="addReview($event)"></app-opinionform>
+<app-opinionform *ngIf="auth.userRoles.banned == false" (newReviewEvent)="addReview($event)"></app-opinionform>
 </div>
 

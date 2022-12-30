@@ -3,6 +3,7 @@ import {TripsService} from 'src/app/services/trips.service'
 import tripsData from '../../../assets/trips.json';
 import {FilteredValues} from 'src/assets/filteredValues';
 import {Trip} from 'src/assets/trip'
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-trips',
@@ -13,7 +14,7 @@ export class TripsComponent implements OnInit{
  
   trips: Trip[] = [];
 
-  constructor(private tripsService: TripsService){
+  constructor(private tripsService: TripsService,public auth: AuthService){
   }
 
   ngOnInit(): void{

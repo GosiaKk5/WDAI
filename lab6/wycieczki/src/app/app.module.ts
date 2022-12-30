@@ -41,6 +41,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { AdministrationComponent } from './components/administration/administration.component';
 
 
 
@@ -62,7 +63,8 @@ import { LoginComponent } from './components/login/login.component';
     SingletripComponent,
     OpinionformComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    AdministrationComponent
     
   ],
   imports: [

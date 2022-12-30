@@ -42,12 +42,12 @@ export class AuthService {
       });
   }
 
-  signInEmailPass(email: string, password: string) {
+  signInUser(email: string, password: string) {
     return this.fireAuth.setPersistence(this.persistance).then((_) => {
       return this.fireAuth
         .signInWithEmailAndPassword(email, password)
         .then((ev) => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['home']);
         })
         .catch((err) => {
           window.alert(err.message);
@@ -55,13 +55,13 @@ export class AuthService {
     });
   }
 
-  registerEmailPass(email: string, password: string) {
+  registerNewUser(email: string, password: string) {
     return this.fireAuth
       .createUserWithEmailAndPassword(email, password)
       .then((res) => {
         let userData = new User(res.user);
         this.db.addNewUser(userData);
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['home']);
       })
       .catch((err) => {
         window.alert(err.message);
@@ -72,6 +72,7 @@ export class AuthService {
     return this.fireAuth.currentUser;
   }
 
+  
   login(email : string, password: string) {
     return this.fireAuth.signInWithEmailAndPassword(email, password);
   }

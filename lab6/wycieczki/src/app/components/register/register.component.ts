@@ -40,7 +40,7 @@ export class RegisterComponent {
       let email = this.loginForm.get('email')!.value;
       let password = this.loginForm.get('password')!.value;
 
-      this.auth.registerEmailPass(email!, password!);
+      this.auth.registerNewUser(email!, password!);
      
 
       this.loginForm.reset();

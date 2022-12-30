@@ -18,8 +18,8 @@ export class User {
             this.roles = userData.roles;
         }else{
             this.roles = {
-                client: true,
                 guest: true,
+                client: true,
                 menager: false,
                 admin: false,
                 banned: false

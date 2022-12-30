@@ -12,7 +12,9 @@
             
             <div class="remove-trip" (click)="removeTrip(trip)"><i class="fa-solid fa-trash-can" ></i></div>
 
-            <img routerLink="/trips/{{trip.id}}" src="{{trip.image}}">
+            
+            <img routerLink="/trips/{{trip.id}}" *ngIf ="auth.userData != null" src="{{trip.image}}">
+            <img style = "cursor: auto" *ngIf ="auth.userData == null" src="{{trip.image}}">
             <h2>{{trip.title | uppercase}}</h2>
             <h4>{{trip.country | uppercase}} </h4>
             <p>{{trip.startDate}} - {{trip.endDate}}</p>

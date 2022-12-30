@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
 import { TripsService } from 'src/app/services/trips.service';
 import { review } from 'src/assets/review';
 import { Trip } from 'src/assets/trip';
@@ -11,6 +12,7 @@ import { Trip } from 'src/assets/trip';
   styleUrls: ['./singletrip.component.css']
 })
 export class SingletripComponent {
+
 
   id: number;
   private routeSub: Subscription;
@@ -24,7 +26,7 @@ export class SingletripComponent {
 
 
 
-  constructor(private route: ActivatedRoute, private tripsService : TripsService) { 
+  constructor(private route: ActivatedRoute, private tripsService : TripsService, public auth: AuthService) { 
     this.reviews = [];
   }
 

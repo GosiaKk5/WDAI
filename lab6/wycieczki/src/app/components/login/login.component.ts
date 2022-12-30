@@ -40,7 +40,7 @@ export class LoginComponent {
       let password = this.loginForm.get('password')!.value;
 
       this.auth.login(email!, password!).catch(err => console.log(err.message));
-      this.auth.signInEmailPass(email!,password!);
+      this.auth.signInUser(email!,password!);
      
       this.loginForm.reset();
     }

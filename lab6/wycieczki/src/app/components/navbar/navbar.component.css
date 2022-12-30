@@ -1,13 +1,13 @@
 nav a.active {
-    background-color: rgb(31, 71, 163);;
+    background-color: rgba(255, 255, 255, 0.197);;
     
 }
 
 nav{
+    justify-content: space-between;
     display: flex;
-    justify-content: center;
-    background-color: rgba(12, 73, 215, 0.823);
-    gap:2px;
+    background-color: rgba(11, 37, 113, 0.922);
+    color: white;
 }
 nav a{
     text-decoration: none;
@@ -19,12 +19,31 @@ nav a{
 .head{
     text-align: center;
     background-color:rgba(203, 57, 27, 0.823);
-    color: white;
+    
     padding: 5px
 }
 
-@media only screen and (max-width: 950px) {
+.log{
+    justify-self: right;
+   
+}
+
+@media only screen and (max-width: 1050px) {
    nav{
-    flex-wrap: wrap;
+        display: flexbox;
+        flex-direction: column;
    }
+   .menu{
+    text-align: center;
+   }
+   .log{
+    text-align: center;
+   }
+   nav a{
+    text-decoration: none;
+    color:  rgba(255, 255, 255, 0.878);
+    padding: 15px 10px;
+    display: inline-block;
+}
   }
+
