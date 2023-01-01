@@ -71,6 +71,13 @@ export class AddtripComponent {
     return newID
   }
 
+  removeTrip(trip : Trip){
+
+      this.tripsService.deleteTrip(trip);
+  }
+
+  
+
   onSubmit() {
 
    if(this.myForm.valid){

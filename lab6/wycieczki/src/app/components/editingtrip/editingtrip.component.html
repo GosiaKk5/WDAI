@@ -1,0 +1,58 @@
+
+<div class ="main-container">
+    <a class="back" routerLink="/edit" routerLinkActive="active">WRÓĆ</a>
+    <h1>Edytuj wycieczkę:</h1>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        
+        <mat-form-field >
+            <mat-label>Tytuł</mat-label>
+            <input matInput  formControlName="newTitle" [(ngModel)]="trip.title" >
+        </mat-form-field>
+
+        
+        <mat-form-field>
+            <mat-label  >Kraj</mat-label>
+            <input matInput formControlName="newCountry" [(ngModel)]="trip.country" >
+        </mat-form-field>
+    
+    
+        <mat-form-field >
+            <mat-label  >Cena</mat-label>
+            <input formControlName="newPrice" matInput [(ngModel)]="trip.price" >
+        </mat-form-field>
+        
+        <mat-form-field >
+            <mat-label >Limit osób</mat-label>
+            <input matInput  formControlName="newLimit" [(ngModel)]="trip.peopleLimit" >
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+              <input  formControlName="newStart" matStartDate placeholder="Start date" [(ngModel)]="trip.startDate" >
+              <input  formControlName="newEnd" matEndDate placeholder="End date" [(ngModel)]="trip.endDate" >
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+    
+        
+    
+        <mat-form-field >
+            <mat-label  >Opis</mat-label>
+            <textarea  matInput formControlName="newDescription" [(ngModel)]="trip.description" ></textarea>
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label  >Link do zdjęcia</mat-label>
+            <input matInput formControlName="newImage" [(ngModel)]="trip.image">
+        </mat-form-field>
+    
+        <button type="submit">Edytuj wycieczkę</button>
+        <h4 class="message" *ngIf = "showMessage">Edytowano wycieczkę!</h4>
+    
+    </form>
+
+</div>
+
+

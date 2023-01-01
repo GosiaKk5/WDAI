@@ -4,7 +4,7 @@
         <a routerLink="/trips" routerLinkActive="active">WYCIECZKI</a>
         <a *ngIf="auth.userData != null" routerLink="/cart" routerLinkActive="active">KOSZYK</a>
         <a *ngIf="auth.userData != null" routerLink="/triphist" routerLinkActive="active">HISTORIA</a>
-        <a *ngIf="auth.userRoles.menager == true || auth.userRoles.admin == true" routerLink="/addtrip" routerLinkActive="active">MENAGER</a>
+        <a *ngIf="auth.userRoles.menager == true || auth.userRoles.admin == true" routerLink="/edit" routerLinkActive="active">EDYTUJ</a>
         <a *ngIf="auth.userRoles.admin == true" routerLink="/admin" routerLinkActive="active">ADMIN</a>
 
     

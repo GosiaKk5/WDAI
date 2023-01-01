@@ -10,14 +10,17 @@ import { SingletripComponent } from './components/singletrip/singletrip.componen
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AdministrationComponent } from './components/administration/administration.component';
+import { EditingtripComponent } from './components/editingtrip/editingtrip.component';
 
 
 const routes: Routes = [
   {path: 'home', component: HomepageComponent},
-  {path: 'trips', component: TripsComponent },
+  {path: 'edit', component: AddtripComponent },
+  {path: 'edit/:id', component: EditingtripComponent},
   {path: 'cart', component: CartComponent},
   {path: 'triphist', component: TriphistComponent},
   {path: 'addtrip', component: AddtripComponent },
+  {path: 'trips', component: TripsComponent},
   {path: 'trips/:id', component: SingletripComponent},
   {path: 'admin', component: AdministrationComponent},
 
@@ -35,4 +38,4 @@ const routes: Routes = [
 
 export class AppRoutingModule { }
 
-export const routingComponents = [HomepageComponent, TripsComponent, CartComponent, TriphistComponent, AddtripComponent,SingletripComponent,LoginComponent,RegisterComponent, AdministrationComponent]
+export const routingComponents = [HomepageComponent, TripsComponent, CartComponent, TriphistComponent, AddtripComponent,SingletripComponent,LoginComponent,RegisterComponent, AdministrationComponent, EditingtripComponent]

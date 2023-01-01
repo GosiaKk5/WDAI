@@ -42,6 +42,7 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdministrationComponent } from './components/administration/administration.component';
+import { EditingtripComponent } from './components/editingtrip/editingtrip.component';
 
 
 
@@ -64,7 +65,8 @@ import { AdministrationComponent } from './components/administration/administrat
     OpinionformComponent,
     RegisterComponent,
     LoginComponent,
-    AdministrationComponent
+    AdministrationComponent,
+    EditingtripComponent
     
   ],
   imports: [

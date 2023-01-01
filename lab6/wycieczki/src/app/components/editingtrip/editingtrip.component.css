@@ -1,0 +1,35 @@
+.main-container{
+    width:80%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+button{
+    width: fit-content;
+    border: 0px;
+    padding: 10px 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.656);
+    border-radius: 10px; 
+    align-self: center;
+}
+
+.message{
+    margin-top: 20px;
+    color: green;
+    align-self: center;
+}
+
+
+

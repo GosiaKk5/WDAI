@@ -1,6 +1,6 @@
 
-div{
-    width:60%;
+.main-container{
+    width:70%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 20px;
     margin: 20px auto;
@@ -23,3 +23,26 @@ button{
     cursor: pointer;
 }
 
+
+/*Edyting trip*/
+.trip{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.trip div{
+    width: fit-content;
+}
+
+.edit-option span{
+    margin-left: 10px;
+}
+
+.remove-trip{
+    cursor: pointer;
+}
+
+.edit-trip{
+    cursor: pointer;
+}
