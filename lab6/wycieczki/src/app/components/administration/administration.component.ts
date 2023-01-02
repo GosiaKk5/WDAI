@@ -35,10 +35,14 @@ export class AdministrationComponent {
 
   setMenager(user : User){
     user.roles.menager = !user.roles.menager;
+    this.tripsService.changeUserRole(user.uid, 'menager', String(user.roles.menager)) 
+
   }
 
   setAdmin(user : User){
     user.roles.admin = !user.roles.admin;
+    this.tripsService.changeUserRole(user.uid, 'admin', String(user.roles.admin)) 
+
   }
 
 }
