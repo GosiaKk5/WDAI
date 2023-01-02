@@ -1,0 +1,31 @@
+.main-container{
+    width:70%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+
+button{
+    width: fit-content;
+    border: 0px;
+    padding: 5px 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.656);
+    border-radius: 10px; 
+    align-self: center;
+}
+
+span{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+}
+
+button{
+    position: relative;
+    top: -5px
+}

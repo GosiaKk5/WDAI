@@ -31,5 +31,18 @@ button{
     align-self: center;
 }
 
+.back{
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.656);
+    color:white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 5px;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+
 
 

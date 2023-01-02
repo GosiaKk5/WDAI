@@ -12,20 +12,25 @@ import { RegisterComponent } from './components/register/register.component';
 import { AdministrationComponent } from './components/administration/administration.component';
 import { EditingtripComponent } from './components/editingtrip/editingtrip.component';
 
+import { MenagerGuard } from './guard/menager.guard';
+import { AdminGuard } from './guard/admin.guard';
+import { LoggedGuard } from './guard/logged.guard';
+import { UnloggedGuard } from './guard/unlogged.guard';
+
 
 const routes: Routes = [
   {path: 'home', component: HomepageComponent},
-  {path: 'edit', component: AddtripComponent },
-  {path: 'edit/:id', component: EditingtripComponent},
-  {path: 'cart', component: CartComponent},
-  {path: 'triphist', component: TriphistComponent},
-  {path: 'addtrip', component: AddtripComponent },
+  {path: 'edit', component: AddtripComponent, canActivate: [MenagerGuard]},
+  {path: 'edit/:id', component: EditingtripComponent, canActivate: [MenagerGuard]},
+  {path: 'cart', component: CartComponent, canActivate: [LoggedGuard]},
+  {path: 'triphist', component: TriphistComponent, canActivate: [LoggedGuard]},
+  //{path: 'addtrip', component: AddtripComponent },
   {path: 'trips', component: TripsComponent},
-  {path: 'trips/:id', component: SingletripComponent},
-  {path: 'admin', component: AdministrationComponent},
+  {path: 'trips/:id', component: SingletripComponent, canActivate: [LoggedGuard]},
+  {path: 'admin', component: AdministrationComponent, canActivate: [AdminGuard]},
 
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent, canActivate: [UnloggedGuard]},
+  {path: 'register', component: RegisterComponent, canActivate: [UnloggedGuard]},
 
   { path: '**', redirectTo: 'home', pathMatch: 'full'},
   

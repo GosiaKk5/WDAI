@@ -13,12 +13,14 @@ import {Roles, User} from 'src/assets/User'
 export class TripsService {
 
   trips!: Observable<any[]>;
+  users!: Observable<any[]>;
   private nextId!: number; 
   
 
   constructor(private db: AngularFireDatabase){
     this.trips = this.db.list('trips').valueChanges();
-
+    this.users = this.db.list('users').valueChanges();
+    
   }
 
   getTrips(): Observable<Trip[]>{
@@ -86,49 +88,18 @@ export class TripsService {
     );
   }
 
-  getUserRoles$(uid: string) {
-    return this.db.object('/users/' + uid + '/roles').valueChanges();
-  }
+  
 
   getUsers() {
     return this.db.list('users').snapshotChanges();
   }
+  /*getUsers(): Observable<any[]>{
+    return this.users
+  }*/
 
   changeUserRole(uid: string, role: string, value: string) {
     let change = '{"' + role + '"' + ':' + value + '}';
     this.db.object('/users/' + uid + '/roles').update(JSON.parse(change));
   }
-
-
-
-
-  /*trips!: Observable<Trip[]>;
-
-  trips: Trip[];
-
-  constructor(){
-    this.trips = tripsData
-  }
-
-  getTrips(): Observable<Trip[]>{
-    this.trips = of(tripsData)
-    return this.trips
-  }
-
-  addTrip(trip: Trip){
-    this.trips.pipe(tap(trips => {
-      trips.push(trip);
-    }));
-    console.log("trip added")
-    console.log(this.trips)
-  }
-
-
-  getTrips(): Trip[]{
-    return this.trips
-  }
-  addTrip(trip: Trip){
-    this.trips.push(trip)
-  }*/
 
 }

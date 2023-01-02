@@ -68,11 +68,7 @@ export class AuthService {
       });
   }
 
-  getuser() {
-    return this.fireAuth.currentUser;
-  }
 
-  
   login(email : string, password: string) {
     return this.fireAuth.signInWithEmailAndPassword(email, password);
   }
@@ -81,12 +77,10 @@ export class AuthService {
     return this.fireAuth.createUserWithEmailAndPassword(email, password);
   }
 
+
+
   logOut() {
     return this.fireAuth.signOut();
-  }
-
-  setPersistance(s: string): void{
-    this.fireAuth.setPersistence(s);
   }
 
   getLogged() {
@@ -97,13 +91,8 @@ export class AuthService {
     return this.fireAuth.currentUser;
   }
 
-  isLoggedIn() {
-    return this.userData != null;
-  }
 
   getAuthenticated(): Observable<any> {
     return this.fireAuth.authState;
   }
-
-
 }

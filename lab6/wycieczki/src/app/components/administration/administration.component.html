@@ -1,1 +1,15 @@
-<p>administration works!</p>
+<div class="main-container">
+    <div class="user" *ngFor = "let user of users">
+        <h1>{{user.email}}</h1>
+        <span>
+            <h3>banned: </h3><button (click) = "setBanned(user)">{{user.roles.banned}}</button>
+        </span>
+        <span>
+            <h3>menager: </h3><button (click) = "setMenager(user)">{{user.roles.menager}}</button>
+        </span>
+        <span>
+            <h3>admin: </h3><button (click) = "setAdmin(user)">{{user.roles.admin}}</button>
+        </span>
+    </div>
+</div>
+
